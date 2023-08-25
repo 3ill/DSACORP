@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { RiCloseFill } from 'react-icons/ri';
 const Nav = () => {
-  const [isToggled, setIsToggled] = useState(false);
+  const [isToggled, setIsToggled] = useState(true);
   const handleIsToggled = () => {
     setIsToggled((prevIsToggled) => !prevIsToggled);
     console.log(isToggled);
@@ -33,8 +33,8 @@ const Nav = () => {
       <div>
         {!isToggled && (
           <div className="lg:hidden md:hidden absolute top-[115px] right-[30px]">
-            <button className="bg-secondary rounded-full flex items-center px-5 py-3 shadow-md">
-              <h1 className="font-mono font-extrabold">Subscribe</h1>
+            <button className="bg-transparent border border-secondary rounded-full flex items-center px-5 py-3 shadow-md">
+              <h1 className="font-mono font-extrabold text-white">Subscribe</h1>
             </button>
           </div>
         )}
