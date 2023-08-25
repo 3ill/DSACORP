@@ -1,9 +1,16 @@
 import { Nav } from './components';
-import { Hero, AboutUs, Upcoming, Subscribe, Footer } from './sections';
+import {
+  Hero,
+  AboutUs,
+  Upcoming,
+  Connect,
+  Subscribe,
+  Footer,
+} from './sections';
 
 const App = () => {
   return (
-    <main className="relative bg-black">
+    <main className="relative bg-black overflow-x-hidden">
       <Nav />
       <section className="xl:padding-l wide:padding-r padding-b">
         <Hero />
@@ -13,6 +20,9 @@ const App = () => {
       </section>
       <section className="padding">
         <Upcoming />
+      </section>
+      <section className="padding">
+        <Connect />
       </section>
       <section className="padding-x sm:py-32 py-16 w-full bg-black ">
         <Subscribe />

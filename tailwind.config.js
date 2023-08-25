@@ -18,6 +18,7 @@ export default {
         palanquin: ['Palanquin', 'sans-serif'],
         montserrat: ['Montserrat', 'sans-serif'],
         orbitron: ['Orbitron', 'sans-serif'],
+        Azeret: ['Azeret Mono', 'Monospace'],
       },
       colors: {
         primary: '#ECEEFF',

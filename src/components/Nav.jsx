@@ -10,7 +10,7 @@ const Nav = () => {
   return (
     <header className="padding-x py-8 absolute z-10 w-full">
       <div className="flex justify-end max-sm:hidden lg:mr-5">
-        <button className="flex justify-center items-center gap-2 px-7 py-4 bg-secondary rounded-full font-mono font-extrabold">
+        <button className="flex justify-center items-center gap-2 px-7 py-4 bg-secondary rounded-[20px] font-Azeret font-extrabold">
           Subscribe
         </button>
       </div>
@@ -33,8 +33,10 @@ const Nav = () => {
       <div>
         {!isToggled && (
           <div className="lg:hidden md:hidden absolute top-[115px] right-[30px]">
-            <button className="bg-transparent border border-secondary rounded-full flex items-center px-5 py-3 shadow-md">
-              <h1 className="font-mono font-extrabold text-white">Subscribe</h1>
+            <button className="bg-transparent border border-secondary rounded-[20px] flex items-center px-5 py-3 shadow-md">
+              <h1 className=" font-Azeret font-extrabold text-white">
+                Subscribe
+              </h1>
             </button>
           </div>
         )}
