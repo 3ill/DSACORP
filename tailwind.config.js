@@ -17,9 +17,11 @@ export default {
       fontFamily: {
         palanquin: ['Palanquin', 'sans-serif'],
         montserrat: ['Montserrat', 'sans-serif'],
+        orbitron: ['Orbitron', 'sans-serif'],
       },
       colors: {
         primary: '#ECEEFF',
+        secondary: '#7E7E7E',
         'coral-red': '#FF6452',
         'slate-gray': '#6D6D6D',
         'pale-blue': '#F5F6FF',
@@ -29,8 +31,7 @@ export default {
         '3xl': '0 10px 40px rgba(0, 0, 0, 0.1)',
       },
       backgroundImage: {
-        hero: "url('assets/images/collection-background.svg')",
-        card: "url('assets/images/thumbnail-background.svg')",
+        hero: "url('assets/images/herobgGray.png')",
       },
       screens: {
         wide: '1440px',

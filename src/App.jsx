@@ -1,10 +1,26 @@
+import { Nav } from './components';
+import { Hero, AboutUs, Upcoming, Subscribe, Footer } from './sections';
+
 const App = () => {
   return (
-    <div className="flex justify-center items-center self-center padding">
-      <h1 className="font-extrabold font-mono text-4xl text-black text-center">
-        IN DEVELOPMENT, CHECK BACK LATER
-      </h1>
-    </div>
+    <main className="relative bg-black">
+      <Nav />
+      <section className="xl:padding-l wide:padding-r padding-b">
+        <Hero />
+      </section>
+      <section className="padding">
+        <AboutUs />
+      </section>
+      <section className="padding">
+        <Upcoming />
+      </section>
+      <section className="padding-x sm:py-32 py-16 w-full bg-black ">
+        <Subscribe />
+      </section>
+      <section className="padding bg-black">
+        <Footer />
+      </section>
+    </main>
   );
 };
 
