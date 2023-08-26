@@ -35,8 +35,23 @@
   }
 }
 
+@keyframes slide-down {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-down {
+  animation: slide-down 0.5s ease-in-out;
+}
+
 .group:hover .group-hover\:pulse-animation {
-  animation: pulse-animation 1s infinite;
+  animation: pulse-animation 0.7s infinite;
 }
 
 @layer utilities {
