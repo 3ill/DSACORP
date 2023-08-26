@@ -3,11 +3,12 @@ import { Button } from '../components';
 const Connect = () => {
   return (
     <section>
-      <div className=" flex flex-col max-sm:mt-[500px] md:mt-[190px] lg:mt-[260px] ">
+      <div className=" flex flex-col max-sm:mt-[550px] md:mt-[230px] lg:mt-[320px] ">
         <h1 className="header-text">Connect With us</h1>
         <h3 className="sub-text">
-          Join a community of like minded individuals to get exclusive perks,
-          updates and resources to traverse your web3 journey
+          Join a community of like minded individuals to get{' '}
+          <span className="guide-text">exclusive perks</span>, updates and
+          resources to traverse your web3 journey
         </h3>
 
         <div className="flex flex-row gap-2 mt-[7px]">

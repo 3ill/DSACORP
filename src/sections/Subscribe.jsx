@@ -16,7 +16,7 @@ const Subscribe = () => {
   return (
     <section
       id="subscribe"
-      className="absolute  max-sm:top-[1163px] md:top-[1270px] lg:top-[1410px]"
+      className="absolute  max-sm:top-[1220px] md:top-[1290px] lg:top-[1460px]"
     >
       <div className="flex flex-col   ">
         <h1 className="header-text">

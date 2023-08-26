@@ -94,4 +94,8 @@
   .sub-text {
     @apply info-text text-left text-sm md:text-lg lg:text-[25px] lg:max-w-[1400px] md:max-w-[700px] md:leading-7 lg:leading-9 max-sm:max-w-[300px];
   }
+
+  .guide-text {
+    @apply text-gray-300 font-medium hover:animate-pulse;
+  }
 }
