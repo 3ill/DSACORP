@@ -28,7 +28,7 @@ const Subscribe = () => {
             value={mail}
             onChange={handleInputChange}
             placeholder="subscribe@dsacorp.com"
-            className="bg-transparent text-slate-gray font-Azeret max-sm:text-[13px] md:text-[15px] lg:text-[17px] border-none"
+            className="bg-transparent text-slate-gray font-Azeret max-sm:text-[13px] md:text-[15px] lg:text-[17px]  border-none"
           />
           <div>
             <Button

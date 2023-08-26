@@ -45,11 +45,12 @@ const Nav = () => {
       <div>
         {!isToggled && (
           <div className="lg:hidden md:hidden absolute top-[115px] right-[30px]">
-            <button className="bg-transparent border border-secondary rounded-[20px] flex items-center px-5 py-3 shadow-md animate-slide-down">
-              <h1 className=" font-Azeret font-extrabold text-white">
-                Subscribe
-              </h1>
-            </button>
+            <Button
+              href="#subscribe"
+              title="subscribe"
+              background="bg-transparent"
+              textColor="text-white"
+            />
           </div>
         )}
       </div>
