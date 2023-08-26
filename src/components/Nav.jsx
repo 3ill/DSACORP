@@ -49,6 +49,7 @@ const Nav = () => {
               href="#subscribe"
               title="subscribe"
               background="bg-transparent"
+              animate="animate-slide-down"
               textColor="text-white"
             />
           </div>

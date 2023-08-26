@@ -1,8 +1,8 @@
-const Button = ({ title, background, textColor, onClick, href }) => {
+const Button = ({ title, background, textColor, onClick, href, animate }) => {
   return (
     <a
       href={href}
-      className={`${background} border border-secondary rounded-[20px] flex items-center px-5 py-3 shadow-md group`}
+      className={`${background}  ${animate} border border-secondary rounded-[20px] flex items-center px-5 py-3 shadow-md group`}
       onClick={onClick}
     >
       <h1
