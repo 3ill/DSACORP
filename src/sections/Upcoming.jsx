@@ -1,6 +1,11 @@
 import { Button } from '../components';
 
 const Upcoming = () => {
+  const registerEvent = () => {
+    const url = 'https://hopin.com/events/web3-the-genesis';
+    window.open(url, '_blank');
+  };
+
   return (
     <section className="absolute top-[400px] md:top-[480px] lg:top-[600px]">
       <div className="flex flex-col  ">
@@ -23,11 +28,12 @@ const Upcoming = () => {
           <br />
           The Genesis Workshop empowers you to navigate this intricate landscape
           with a holistic approach, enhancing both your craft and your
-          individualit
+          individuality
         </h3>
         <div className="flex flex-row gap-2 mt-[9px]">
           <Button
             title="Reserve"
+            onClick={registerEvent}
             background="bg-secondary"
             textColor="text-black"
           />
