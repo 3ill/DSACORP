@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { RiCloseFill } from 'react-icons/ri';
+import Button from './Button';
+
 const Nav = () => {
   const [isToggled, setIsToggled] = useState(true);
   const handleIsToggled = () => {
@@ -10,9 +12,12 @@ const Nav = () => {
   return (
     <header className="padding-x py-8 absolute z-10 w-full">
       <div className="flex justify-end max-sm:hidden lg:mr-5">
-        <button className="flex justify-center items-center gap-2 px-7 py-4 bg-secondary rounded-[20px] font-Azeret font-extrabold">
-          Subscribe
-        </button>
+        <Button
+          href="#subscribe"
+          title="Subscribe"
+          background="bg-secondary"
+          textColor="text-black"
+        />
       </div>
       <div className="flex justify-end lg:hidden md:hidden">
         {isToggled ? (

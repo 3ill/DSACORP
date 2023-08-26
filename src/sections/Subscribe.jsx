@@ -14,18 +14,21 @@ const Subscribe = () => {
   };
 
   return (
-    <section>
-      <div className="flex flex-col absolute top-[870px] md:top-[1030px] lg:top-[1210px]  ">
+    <section
+      id="subscribe"
+      className="absolute  max-sm:top-[1163px] md:top-[1270px] lg:top-[1410px]"
+    >
+      <div className="flex flex-col   ">
         <h1 className="header-text">
           Subscribe For Updates <br /> & Newsletter
         </h1>
-        <form className="flex flex-row justify-between border rounded-[20px] px-2 py-2 self-center mr-5 lg:max-w-[1600px] md:gap-[230px]">
+        <form className="flex flex-row justify-between border relative rounded-[20px] px-2 py-2 max-sm:mr-5 lg:max-w-[800px] md:max-w-[700px] max-sm:max-w-sm  md:gap-[230px]">
           <input
             type="text"
             value={mail}
             onChange={handleInputChange}
             placeholder="subscribe@dsacorp.com"
-            className="bg-transparent text-slate-gray border-none"
+            className="bg-transparent text-slate-gray font-Azeret max-sm:text-[13px] md:text-[15px] lg:text-[17px] border-none"
           />
           <div>
             <Button

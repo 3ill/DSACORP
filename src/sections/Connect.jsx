@@ -3,7 +3,7 @@ import { Button } from '../components';
 const Connect = () => {
   return (
     <section>
-      <div className=" flex flex-col absolute top-[650px] lg:top-[930px] md:top-[780px]">
+      <div className=" flex flex-col max-sm:mt-[500px] md:mt-[190px] lg:mt-[260px] ">
         <h1 className="header-text">Connect With us</h1>
         <h3 className="sub-text">
           Join a community of like minded individuals to get exclusive perks,

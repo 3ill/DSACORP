@@ -24,7 +24,7 @@ const App = () => {
       <section className="padding">
         <Connect />
       </section>
-      <section className="padding-x sm:py-32 py-16 w-full bg-black ">
+      <section className="padding ">
         <Subscribe />
       </section>
       <section className="padding bg-black">
