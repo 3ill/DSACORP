@@ -1,9 +1,16 @@
 import { Button } from '../components';
+import { useNavigate } from 'react-router-dom';
 
 const Upcoming = () => {
+  const history = useNavigate();
   const registerEvent = () => {
     const url = 'https://hopin.com/events/web3-the-genesis';
     window.open(url, '_blank');
+  };
+
+  const handleLearnMore = (e) => {
+    e.preventDefault();
+    history('/learn');
   };
 
   return (
@@ -39,6 +46,7 @@ const Upcoming = () => {
           />
           <Button
             title="Learn more"
+            onClick={handleLearnMore}
             background="bg-transparent"
             textColor="text-slate-gray"
           />
