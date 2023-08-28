@@ -1,3 +1,4 @@
+import { Download } from '../components';
 const AboutUs = () => {
   return (
     <section>
@@ -9,6 +10,13 @@ const AboutUs = () => {
           of innovation and collaboration that propels us towards a
           decentralized future.
         </h3>
+        <div className="flex mt-3">
+          <Download
+            title="Learn More"
+            background="bg-secondary"
+            textColor="text-black"
+          />
+        </div>
       </div>
     </section>
   );

@@ -1,4 +1,4 @@
-import { LearnMore, Home } from './pages';
+import { LearnMore, Home, Reserve } from './pages';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 const App = () => {
@@ -8,6 +8,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/learn" element={<LearnMore />} />
+          <Route path="/reserve" element={<Reserve />} />
         </Routes>
       </main>
     </Router>

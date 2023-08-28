@@ -3,18 +3,13 @@ import { useNavigate } from 'react-router-dom';
 
 const Upcoming = () => {
   const history = useNavigate();
-  const registerEvent = () => {
-    const url = 'https://hopin.com/events/web3-the-genesis';
-    window.open(url, '_blank');
-  };
-
-  const handleLearnMore = (e) => {
+  const registerEvent = (e) => {
     e.preventDefault();
-    history('/learn');
+    history('/reserve');
   };
 
   return (
-    <section className="absolute top-[400px] md:top-[480px] lg:top-[600px]">
+    <section className="absolute top-[460px] md:top-[500px] lg:top-[650px]">
       <div className="flex flex-col  ">
         <h1 className="header-text">Web3: The Genesis</h1>
         <h3 className="sub-text">
@@ -43,12 +38,6 @@ const Upcoming = () => {
             onClick={registerEvent}
             background="bg-secondary"
             textColor="text-black"
-          />
-          <Button
-            title="Learn more"
-            onClick={handleLearnMore}
-            background="bg-transparent"
-            textColor="text-slate-gray"
           />
         </div>
       </div>

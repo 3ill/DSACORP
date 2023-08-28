@@ -16,7 +16,7 @@ const Subscribe = () => {
   return (
     <section
       id="subscribe"
-      className="absolute  max-sm:top-[1220px] md:top-[1290px] lg:top-[1460px]"
+      className="absolute  max-sm:top-[1270px] md:top-[1290px] lg:top-[1460px]"
     >
       <div className="flex flex-col   ">
         <h1 className="header-text">
@@ -26,6 +26,7 @@ const Subscribe = () => {
           <input
             type="text"
             value={mail}
+            required
             onChange={handleInputChange}
             placeholder="subscribe@dsacorp.com"
             className="bg-transparent text-slate-gray font-Azeret max-sm:text-[13px] md:text-[15px] lg:text-[17px]  border-none"
