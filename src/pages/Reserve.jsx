@@ -49,7 +49,7 @@ const Reserve = () => {
               value={userName}
               onChange={handleUserChange}
               required
-              placeholder="DSA CORP"
+              placeholder="dsacorp"
               className="font-Azeret text-slate-gray bg-transparent text-[12px] tracking-wide max-w-sm"
             />
           </div>
@@ -63,7 +63,7 @@ const Reserve = () => {
               value={userMail}
               onChange={handleMailChange}
               required
-              placeholder="DSACORP@RESERVE.COM"
+              placeholder="dsacorp@reserve.com"
               className="font-Azeret text-slate-gray text-[12px] tracking-wide bg-transparent max-w-sm"
             />
           </div>
