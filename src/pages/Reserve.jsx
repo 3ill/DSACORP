@@ -3,7 +3,8 @@ import { motion } from 'framer-motion';
 
 import { staggerContainer } from '../utils/motion';
 import { TypingText } from '../components/CustomTexts';
-import { instagram, user, mail } from '../assets/icons';
+import { instagram, user, mail, DSA } from '../assets/icons';
+
 import { Footer } from '../sections';
 
 const Reserve = () => {
@@ -41,7 +42,8 @@ const Reserve = () => {
           textStyles="text-[20px] mt-5 font-Azeret text-secondary text-center"
         />
 
-        <div className="border flex flex-col border-secondary padding w-[337px] md:w-[380px] md:h-[380px] h-[377px] mt-5">
+        <div className="border flex flex-col border-secondary padding w-[337px] md:w-[380px] md:h-[500px] max-sm:h-[407px] mt-5">
+          <img src={DSA} alt="logo" className="w-[90px] h-[90px] self-center" />
           <div className="flex flex-row gap-3 items-center">
             <img src={user} alt="user" className="w-[40px] h-[40px]" />
             <input

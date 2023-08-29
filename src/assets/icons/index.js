@@ -4,5 +4,6 @@ import instagram from './Instagram Circle.png';
 import mail from './Circled Envelope.png';
 import user from './Change User.png';
 import PitchDeck from '../Document/DSA CORP PITCH DECK (1).pdf';
+import DSA from './Hotpot.png';
 
-export { hamburger, copyright, instagram, mail, user, PitchDeck };
+export { hamburger, copyright, instagram, mail, user, PitchDeck, DSA };

@@ -3,8 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Upcoming = () => {
   const history = useNavigate();
-  const registerEvent = (e) => {
-    e.preventDefault();
+  const registerEvent = () => {
     history('/reserve');
   };
 
