@@ -1,9 +1,17 @@
 import { Download } from '../components';
+import { motion } from 'framer-motion';
+import { TitleText } from '../components/CustomTexts';
+import { staggerContainer } from '../utils/motion';
 const AboutUs = () => {
   return (
-    <section>
+    <motion.section
+      variants={staggerContainer}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: false, amount: 0.25 }}
+    >
       <div className="flex flex-col absolute top-[200px] lg:top-[350px] md:top-[270px]">
-        <h1 className="header-text">About Us</h1>
+        <TitleText title="About Us" textStyles="header-text" />
         <h3 className="sub-text">
           At DSA CORP, we believe that communities are the heartbeat of the Web3
           revolution. They serve as the catalysts for change, igniting the spark
@@ -18,7 +26,7 @@ const AboutUs = () => {
           />
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

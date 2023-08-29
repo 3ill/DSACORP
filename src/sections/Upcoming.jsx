@@ -1,5 +1,8 @@
 import { Button } from '../components';
 import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { TitleText } from '../components/CustomTexts';
+import { staggerContainer } from '../utils/motion';
 
 const Upcoming = () => {
   const history = useNavigate();
@@ -8,9 +11,15 @@ const Upcoming = () => {
   };
 
   return (
-    <section className="absolute top-[460px] md:top-[500px] lg:top-[650px]">
+    <motion.section
+      variants={staggerContainer}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: false, amount: 0.25 }}
+      className="absolute top-[460px] md:top-[520px] lg:top-[650px]"
+    >
       <div className="flex flex-col  ">
-        <h1 className="header-text">Web3: The Genesis</h1>
+        <TitleText title="Web3: The Genesis" textStyles="header-text" />
         <h3 className="sub-text">
           Amidst the intricate tapestry of technical advancements within the
           web3 ecosystem, the pursuit of financial and technological excellence
@@ -40,7 +49,7 @@ const Upcoming = () => {
           />
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

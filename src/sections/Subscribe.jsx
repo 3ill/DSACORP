@@ -1,5 +1,9 @@
 import { useState } from 'react';
 import { Button } from '../components';
+import { motion } from 'framer-motion';
+import { TitleText } from '../components/CustomTexts';
+import { staggerContainer } from '../utils/motion';
+
 const Subscribe = () => {
   const [mail, setMail] = useState('');
 
@@ -14,15 +18,24 @@ const Subscribe = () => {
   };
 
   return (
-    <section
+    <motion.section
+      variants={staggerContainer}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: false, amount: 0.25 }}
       id="subscribe"
-      className="absolute  max-sm:top-[1270px] md:top-[1290px] lg:top-[1460px]"
+      className="absolute  max-sm:top-[1270px] md:top-[1290px] lg:top-[1490px]"
     >
       <div className="flex flex-col   ">
-        <h1 className="header-text">
-          Subscribe For Updates <br /> & Newsletter
-        </h1>
-        <form className="flex flex-row justify-between border relative rounded-[20px] px-2 py-2 max-sm:mr-5 lg:max-w-[800px] md:max-w-[700px] max-sm:max-w-sm  md:gap-[230px]">
+        <TitleText
+          title={
+            <>
+              Subscribe For Updates <br /> & Newsletter
+            </>
+          }
+          textStyles="header-text"
+        />
+        <form className="flex flex-row justify-between border relative rounded-[20px] px-2 py-2 max-sm:mr-5 lg:max-w-[800px] md:max-w-[700px] max-sm:max-w-sm mt-3  md:gap-[230px]">
           <input
             type="text"
             value={mail}
@@ -41,7 +54,7 @@ const Subscribe = () => {
           </div>
         </form>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 
 import { staggerContainer } from '../utils/motion';
-import { TypingText } from '../components/CustomTexts';
+import { TypingText, TitleText } from '../components/CustomTexts';
 import { instagram, user, mail, DSA } from '../assets/icons';
 
 import { Footer } from '../sections';
@@ -36,10 +36,13 @@ const Reserve = () => {
       className="padding flex flex-col bg-hero"
     >
       <div className="flex flex-col justify-center items-center">
-        <h1 className="header-text text-center">Web3: The Genesis</h1>
+        <TitleText
+          title="Web3: The Genesis"
+          textStyles="header-text text-center"
+        />
         <TypingText
           title="Coming Soon"
-          textStyles="text-[20px] mt-5 font-Azeret text-secondary text-center"
+          textStyles="text-[25px] mt-5 font-Azeret text-slate-gray text-center"
         />
 
         <div className="border flex flex-col border-secondary padding w-[337px] md:w-[380px] md:h-[500px] max-sm:h-[407px] mt-5">
@@ -87,8 +90,8 @@ const Reserve = () => {
           <hr className="mt-2 flex " />
 
           <div className=" justify-center items-center self-center mt-10">
-            <button className="flex items-center justify-center border border-secondary rounded-[3px] w-[138px] h-[40px] ">
-              <h1 className="font-Azeret  text-white text-center font-extrabold">
+            <button className="flex items-center justify-center border border-secondary rounded-[3px] w-[138px] h-[40px] group ">
+              <h1 className="font-Azeret  text-white text-center font-extrabold group-hover:animate-pulse">
                 Reserve
               </h1>
             </button>
