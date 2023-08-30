@@ -48,13 +48,13 @@ const Reserve = () => {
         <div className="border flex flex-col border-secondary padding w-[337px] md:w-[380px] md:h-[500px] max-sm:h-[407px] mt-5">
           <img src={DSA} alt="logo" className="w-[90px] h-[90px] self-center" />
           <div className="flex flex-row gap-3 items-center">
-            <img src={user} alt="user" className="w-[40px] h-[40px]" />
+            <img src={user} alt="user" className="w-[45px] h-[40px]" />
             <input
               type="text"
               value={userName}
               onChange={handleUserChange}
               required
-              placeholder="dsacorp"
+              placeholder="name"
               className="font-Azeret text-slate-gray bg-transparent text-[12px] tracking-wide max-w-sm"
             />
           </div>
@@ -62,13 +62,13 @@ const Reserve = () => {
           <hr className="mt-2" />
 
           <div className="flex flex-row gap-3 items-center mt-5">
-            <img src={mail} alt="user" className="w-[40px] h-[40px]" />
+            <img src={mail} alt="user" className="w-[45px] h-[40px]" />
             <input
               type="text"
               value={userMail}
               onChange={handleMailChange}
               required
-              placeholder="dsacorp@reserve.com"
+              placeholder="email"
               className="font-Azeret text-slate-gray text-[12px] tracking-wide bg-transparent max-w-sm"
             />
           </div>
@@ -76,13 +76,13 @@ const Reserve = () => {
           <hr className="mt-2" />
 
           <div className="flex flex-row gap-3 items-center mt-5">
-            <img src={instagram} alt="user" className="w-[40px] h-[40px]" />
+            <img src={instagram} alt="user" className="w-[45px] h-[40px]" />
             <input
               type="text"
               value={userHandle}
               onChange={handleInstaChange}
               required
-              placeholder="instagram.com/dsa_corp"
+              placeholder="instagram handle"
               className="font-Azeret text-slate-gray text-[12px] tracking-wide bg-transparent max-w-sm"
             />
           </div>
