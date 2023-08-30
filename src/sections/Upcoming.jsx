@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { Button } from '../components';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -10,10 +9,6 @@ const Upcoming = () => {
   const registerEvent = () => {
     history('/reserve');
   };
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   return (
     <motion.section

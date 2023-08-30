@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 import { staggerContainer } from '../utils/motion';
@@ -47,6 +47,12 @@ const Reserve = () => {
       setIsLoading(false);
     }
   };
+
+  useEffect(() => {
+    window.requestAnimationFrame(() => {
+      window.scrollTo(0, 0);
+    });
+  }, []);
 
   return (
     <motion.section
