@@ -7,6 +7,7 @@ import { staggerContainer } from '../utils/motion';
 const Subscribe = () => {
   const [mail, setMail] = useState('');
   const [feedback, setFeedback] = useState('');
+  const [isLoading, setisLoading] = useState(false);
 
   const handleInputChange = (e) => {
     e.preventDefault();
@@ -18,6 +19,7 @@ const Subscribe = () => {
     console.log(mail);
 
     try {
+      setisLoading(true);
       const response = await fetch(
         'https://dsacorp-server.vercel.app/api/v1/dsacorp/subscribe',
         {
@@ -34,10 +36,10 @@ const Subscribe = () => {
       const feed = data.message;
 
       setFeedback(feed);
-
-      console.log(data);
     } catch (error) {
       console.error(error);
+    } finally {
+      setisLoading(false);
     }
   };
 
@@ -78,8 +80,13 @@ const Subscribe = () => {
             />
           </div>
         </form>
-        {feedback && (
+        {isLoading && (
           <p className="text-slate-gray text-[15px] mt-3 mb-3 self-center font-Azeret">
+            Please Wait
+          </p>
+        )}
+        {feedback && (
+          <p className="text-white font-semibold text-[15px] mt-3 mb-3 self-center font-Azeret">
             {feedback}
           </p>
         )}

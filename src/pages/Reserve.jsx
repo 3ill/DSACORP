@@ -3,28 +3,49 @@ import { motion } from 'framer-motion';
 
 import { staggerContainer } from '../utils/motion';
 import { TypingText, TitleText } from '../components/CustomTexts';
-import { instagram, user, mail, DSA } from '../assets/icons';
+import { instagram, user, mail } from '../assets/icons';
 
 import { Footer } from '../sections';
 
 const Reserve = () => {
-  const [userName, setUserName] = useState('');
-  const [userMail, setUserMail] = useState('');
-  const [userHandle, setUserHandle] = useState('');
+  const [form, setForm] = useState({
+    name: '',
+    email: '',
+    social: '',
+  });
 
-  const handleUserChange = (e) => {
-    e.preventDefault();
-    setUserName(e.target.value);
+  const [feedback, setFeedback] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleMailChange = (e) => {
+  const handleReserveClick = async (e) => {
     e.preventDefault();
-    setUserMail(e.target.value);
-  };
+    try {
+      setIsLoading(true);
+      const response = await fetch(
+        'https://dsacorp-server.vercel.app/api/v1/dsacorp/newUser',
+        {
+          method: 'POST',
+          headers: {
+            'content-type': 'application/json',
+          },
+          body: JSON.stringify({
+            ...form,
+          }),
+        }
+      );
 
-  const handleInstaChange = (e) => {
-    e.preventDefault();
-    setUserHandle(e.target.value);
+      const data = await response.json();
+      const feed = data.message;
+      setFeedback(feed);
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -45,14 +66,17 @@ const Reserve = () => {
           textStyles="text-[25px] mt-5 font-Azeret text-slate-gray text-center"
         />
 
-        <div className="border flex flex-col border-secondary padding w-[337px] md:w-[380px] md:h-[500px] max-sm:h-[407px] mt-5">
-          <img src={DSA} alt="logo" className="w-[90px] h-[90px] self-center" />
+        <form className="border flex flex-col border-secondary padding w-[337px] md:w-[380px] md:h-[500px] max-sm:h-[407px] mt-5">
+          <h1 className="text-white font-orbitron font-extrabold text-[34px] self-center">
+            DSA
+          </h1>
           <div className="flex flex-row gap-3 items-center">
             <img src={user} alt="user" className="w-[45px] h-[40px]" />
             <input
               type="text"
-              value={userName}
-              onChange={handleUserChange}
+              name="name"
+              value={form.name}
+              onChange={handleChange}
               required
               placeholder="name"
               className="font-Azeret text-slate-gray bg-transparent text-[12px] tracking-wide max-w-sm"
@@ -65,8 +89,9 @@ const Reserve = () => {
             <img src={mail} alt="user" className="w-[45px] h-[40px]" />
             <input
               type="text"
-              value={userMail}
-              onChange={handleMailChange}
+              name="email"
+              value={form.email}
+              onChange={handleChange}
               required
               placeholder="email"
               className="font-Azeret text-slate-gray text-[12px] tracking-wide bg-transparent max-w-sm"
@@ -79,8 +104,9 @@ const Reserve = () => {
             <img src={instagram} alt="user" className="w-[45px] h-[40px]" />
             <input
               type="text"
-              value={userHandle}
-              onChange={handleInstaChange}
+              name="social"
+              value={form.social}
+              onChange={handleChange}
               required
               placeholder="instagram handle"
               className="font-Azeret text-slate-gray text-[12px] tracking-wide bg-transparent max-w-sm"
@@ -90,13 +116,27 @@ const Reserve = () => {
           <hr className="mt-2 flex " />
 
           <div className=" justify-center items-center self-center mt-10">
-            <button className="flex items-center justify-center border border-secondary rounded-[3px] w-[138px] h-[40px] group ">
+            <button
+              disabled={!form.name || !form.email || !form.social}
+              className="flex items-center justify-center border border-secondary rounded-[3px] w-[138px] h-[40px] group "
+              onClick={handleReserveClick}
+            >
               <h1 className="font-Azeret  text-white text-center font-extrabold group-hover:animate-pulse">
                 Reserve
               </h1>
             </button>
           </div>
-        </div>
+        </form>
+        {isLoading && (
+          <p className="text-slate-gray text-[15px] mt-3 mb-3 self-center font-Azeret">
+            Please Wait
+          </p>
+        )}
+        {feedback && (
+          <p className="text-white font-semibold text-[15px] mt-3 mb-3 self-center font-Azeret">
+            {feedback}
+          </p>
+        )}
       </div>
       <h3 className="font-Azeret text-[20px] text-slate-gray self-center mt-10">
         Exclusive Access
