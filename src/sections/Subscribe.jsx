@@ -6,15 +6,39 @@ import { staggerContainer } from '../utils/motion';
 
 const Subscribe = () => {
   const [mail, setMail] = useState('');
+  const [feedback, setFeedback] = useState('');
 
   const handleInputChange = (e) => {
     e.preventDefault();
     setMail(e.target.value);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(mail);
+
+    try {
+      const response = await fetch(
+        'https://dsacorp-server.vercel.app/api/v1/dsacorp/subscribe',
+        {
+          method: 'POST',
+          headers: {
+            'content-type': 'application/json',
+          },
+          body: JSON.stringify({ email: mail }),
+        }
+      );
+
+      const data = await response.json();
+
+      const feed = data.message;
+
+      setFeedback(feed);
+
+      console.log(data);
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (
@@ -50,9 +74,15 @@ const Subscribe = () => {
               background="bg-secondary"
               textColor="text-black"
               onClick={handleSubmit}
+              disabled={!mail}
             />
           </div>
         </form>
+        {feedback && (
+          <p className="text-slate-gray text-[15px] mt-3 mb-3 self-center font-Azeret">
+            {feedback}
+          </p>
+        )}
       </div>
     </motion.section>
   );
