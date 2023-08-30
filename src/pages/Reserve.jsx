@@ -61,16 +61,18 @@ const Reserve = () => {
           title="Web3: The Genesis"
           textStyles="header-text text-center"
         />
-        <TypingText
-          title="Coming Soon"
-          textStyles="text-[25px] mt-5 font-Azeret text-slate-gray text-center"
-        />
+        <div className="mt-2">
+          <TypingText
+            title="Coming Soon"
+            textStyles="text-[16px] md:text-[30px] lg:text-[45px] text-gray-200 font-Azeret font-semibold tracking-[2.72px]"
+          />
+        </div>
 
         <form className="border flex flex-col border-secondary padding w-[337px] md:w-[380px] md:h-[500px] max-sm:h-[407px] mt-5">
-          <h1 className="text-white font-orbitron font-extrabold text-[35px] self-center">
-            DSA
+          <h1 className="text-white font-orbitron font-extrabold tracking-wide text-[30px] self-center">
+            DSA CORP
           </h1>
-          <div className="flex flex-row gap-3 items-center">
+          <div className="flex flex-row gap-3 mt-2 items-center">
             <img src={user} alt="user" className="w-[45px] h-[40px]" />
             <input
               type="text"
