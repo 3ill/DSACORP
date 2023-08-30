@@ -67,7 +67,7 @@ const Reserve = () => {
         />
 
         <form className="border flex flex-col border-secondary padding w-[337px] md:w-[380px] md:h-[500px] max-sm:h-[407px] mt-5">
-          <h1 className="text-white font-orbitron font-extrabold text-[34px] self-center">
+          <h1 className="text-white font-orbitron font-extrabold text-[35px] self-center">
             DSA
           </h1>
           <div className="flex flex-row gap-3 items-center">
