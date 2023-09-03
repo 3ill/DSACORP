@@ -1,5 +1,6 @@
 import { Home, Reserve } from './pages';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 
 const App = () => {
   return (
@@ -9,6 +10,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/reserve" element={<Reserve />} />
         </Routes>
+        <Analytics />
       </main>
     </Router>
   );
