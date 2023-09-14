@@ -2,7 +2,7 @@
 
 Welcome to Dsa corp repo, this is the genesis project, All subsquent updates will be pushed here
 
-<div align="center"> <img src="https://github.com/3ill/DSACORP/blob/main/public/dsa.jpeg" width="200" height="200"  />
+<div align="center"> <img src="https://github.com/3ill/DSACORP/blob/main/public/dsa.jpeg" width="500" height="500"  />
 </div>
 
 ## Authors
