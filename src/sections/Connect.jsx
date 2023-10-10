@@ -38,20 +38,20 @@ const Connect = () => {
           <img
             src={IG}
             alt="instagram"
-            className="w-[50px] h-[50px] hover:animate-pulse"
+            className="w-[50px] h-[50px] hover:animate-pulse hover:scale-110 active:scale-105 transition"
             onClick={handleInstagramClick}
           />
 
           <img
             src={Whatsapp}
             alt="whatsapp"
-            className="w-[50px] h-[50px] hover:animate-pulse"
+            className="w-[50px] h-[50px] hover:animate-pulse hover:scale-110 active:scale-105 transition"
             onClick={handleWhatsappClick}
           />
           <img
             src={Telegram}
             alt="telegram"
-            className="w-[50px] h-[50px] hover:animate-pulse"
+            className="w-[50px] h-[50px] hover:animate-pulse hover:scale-110 active:scale-105 transition"
             onClick={handleTelegramClick}
           />
         </div>

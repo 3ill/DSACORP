@@ -74,7 +74,7 @@ const Reserve = () => {
           />
         </div>
 
-        <form className="border flex flex-col border-secondary padding w-[337px] md:w-[380px] md:h-[500px] max-sm:h-[407px] mt-5">
+        <form className="border flex flex-col border-secondary padding w-[337px] md:w-[480px] md:h-[500px] max-sm:h-[407px] mt-5">
           <h1 className="text-white font-orbitron font-extrabold tracking-wide text-[30px] self-center">
             DSA CORP
           </h1>
@@ -126,10 +126,10 @@ const Reserve = () => {
           <div className=" justify-center items-center self-center mt-10">
             <button
               disabled={!form.name || !form.email || !form.social}
-              className="flex items-center justify-center border border-secondary rounded-[3px] w-[138px] h-[40px] group "
+              className="flex items-center justify-center border border-secondary rounded-[9px] w-[138px] h-[40px] group hover:scale-110 active:scale-105 transition shadow-md  "
               onClick={handleReserveClick}
             >
-              <h1 className="font-Azeret  text-white text-center font-extrabold group-hover:animate-pulse">
+              <h1 className="font-Azeret  text-white text-center font-extrabold group-hover:animate-pulse transition">
                 Reserve
               </h1>
             </button>

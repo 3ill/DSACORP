@@ -5,7 +5,7 @@ import { Analytics } from '@vercel/analytics/react';
 const App = () => {
   return (
     <Router>
-      <main className="relative  bg-black overflow-x-hidden">
+      <main className="relative  bg-black overflow-x-hidden scroll-smooth transition">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/reserve" element={<Reserve />} />
