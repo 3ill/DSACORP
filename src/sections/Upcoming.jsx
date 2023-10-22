@@ -16,7 +16,7 @@ const Upcoming = () => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.25 }}
-      className="absolute top-[460px] md:top-[520px] lg:top-[650px]"
+      className="absolute top-[950px] md:top-[1050px] lg:top-[1240px]"
     >
       <div className="flex flex-col  ">
         <TitleText title="Web3: The Genesis" textStyles="header-text" />

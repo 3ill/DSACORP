@@ -26,7 +26,7 @@ const Connect = () => {
       whileInView="show"
       viewport={{ once: false, amount: 0.25 }}
     >
-      <div className=" flex flex-col max-sm:mt-[600px] md:mt-[250px] lg:mt-[350px] ">
+      <div className=" flex flex-col max-sm:mt-[500px] md:mt-[290px] lg:mt-[350px] ">
         <TitleText title="Connect With Us" textStyles="header-text" />
         <h3 className="sub-text">
           Join a community of like minded individuals to get{' '}
@@ -38,20 +38,20 @@ const Connect = () => {
           <img
             src={IG}
             alt="instagram"
-            className="w-[50px] h-[50px] hover:animate-pulse hover:scale-110 active:scale-105 transition"
+            className="w-[50px] h-[50px] lg:w-[80px] lg:h-[80px] hover:animate-pulse hover:scale-110 active:scale-105 transition"
             onClick={handleInstagramClick}
           />
 
           <img
             src={Whatsapp}
             alt="whatsapp"
-            className="w-[50px] h-[50px] hover:animate-pulse hover:scale-110 active:scale-105 transition"
+            className="w-[50px] h-[50px] lg:w-[80px] lg:h-[80px] hover:animate-pulse hover:scale-110 active:scale-105 transition"
             onClick={handleWhatsappClick}
           />
           <img
             src={Telegram}
             alt="telegram"
-            className="w-[50px] h-[50px] hover:animate-pulse hover:scale-110 active:scale-105 transition"
+            className="w-[50px] h-[50px] lg:w-[80px] lg:h-[80px] hover:animate-pulse hover:scale-110 active:scale-105 transition"
             onClick={handleTelegramClick}
           />
         </div>

@@ -2,6 +2,7 @@ import { Nav } from '../components';
 import {
   Hero,
   AboutUs,
+  Web3,
   Upcoming,
   Connect,
   Subscribe,
@@ -17,6 +18,9 @@ const Home = () => {
       </section>
       <section className="padding">
         <AboutUs />
+      </section>
+      <section className="padding">
+        <Web3 />
       </section>
       <section className="padding">
         <Upcoming />

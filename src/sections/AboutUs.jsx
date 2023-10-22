@@ -2,6 +2,7 @@ import { Download } from '../components';
 import { motion } from 'framer-motion';
 import { TitleText } from '../components/CustomTexts';
 import { staggerContainer } from '../utils/motion';
+
 const AboutUs = () => {
   return (
     <motion.section
@@ -18,6 +19,7 @@ const AboutUs = () => {
           of innovation and collaboration that propels us towards a
           decentralized future.
         </h3>
+
         <div className="flex mt-3">
           <Download
             title="Learn More"

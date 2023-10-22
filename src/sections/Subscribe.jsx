@@ -7,7 +7,8 @@ import { staggerContainer } from '../utils/motion';
 const Subscribe = () => {
   const [mail, setMail] = useState('');
   const [feedback, setFeedback] = useState('');
-  const [isLoading, setisLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const subscribe = import.meta.env.VITE_SUBSCRIBE_API;
 
   const handleInputChange = (e) => {
     e.preventDefault();
@@ -19,17 +20,14 @@ const Subscribe = () => {
     console.log(mail);
 
     try {
-      setisLoading(true);
-      const response = await fetch(
-        'https://dsacorp-server.vercel.app/api/v1/dsacorp/subscribe',
-        {
-          method: 'POST',
-          headers: {
-            'content-type': 'application/json',
-          },
-          body: JSON.stringify({ email: mail }),
-        }
-      );
+      setIsLoading(true);
+      const response = await fetch(subscribe, {
+        method: 'POST',
+        headers: {
+          'content-type': 'application/json',
+        },
+        body: JSON.stringify({ email: mail }),
+      });
 
       const data = await response.json();
 
@@ -39,7 +37,7 @@ const Subscribe = () => {
     } catch (error) {
       console.error(error);
     } finally {
-      setisLoading(false);
+      setIsLoading(false);
     }
   };
 
@@ -50,7 +48,7 @@ const Subscribe = () => {
       whileInView="show"
       viewport={{ once: false, amount: 0.25 }}
       id="subscribe"
-      className="absolute  max-sm:top-[1270px] md:top-[1290px] lg:top-[1490px]"
+      className="absolute  max-sm:top-[1850px] md:top-[1890px] lg:top-[2200px]"
     >
       <div className="flex flex-col   ">
         <TitleText

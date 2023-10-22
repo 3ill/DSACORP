@@ -1,5 +1,6 @@
 import hamburger from './hamburger.svg';
 import copyright from './copyright-sign.svg';
+import headset from './headset.svg';
 import instagram from './Instagram Circle.png';
 import mail from './Circled Envelope.png';
 import user from './Change User.png';
@@ -12,6 +13,7 @@ import IG from './Instagram.png';
 export {
   hamburger,
   copyright,
+  headset,
   instagram,
   mail,
   user,
