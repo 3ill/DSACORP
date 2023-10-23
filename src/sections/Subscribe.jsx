@@ -8,7 +8,6 @@ const Subscribe = () => {
   const [mail, setMail] = useState('');
   const [feedback, setFeedback] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  const subscribe = import.meta.env.VITE_SUBSCRIBE_API;
 
   const handleInputChange = (e) => {
     e.preventDefault();
@@ -21,13 +20,16 @@ const Subscribe = () => {
 
     try {
       setIsLoading(true);
-      const response = await fetch(subscribe, {
-        method: 'POST',
-        headers: {
-          'content-type': 'application/json',
-        },
-        body: JSON.stringify({ email: mail }),
-      });
+      const response = await fetch(
+        'https://dsacorp-server.vercel.app/api/v1/dsacorp/subscribe',
+        {
+          method: 'POST',
+          headers: {
+            'content-type': 'application/json',
+          },
+          body: JSON.stringify({ email: mail }),
+        }
+      );
 
       const data = await response.json();
 

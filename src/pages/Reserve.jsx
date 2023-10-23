@@ -16,7 +16,6 @@ const Reserve = () => {
 
   const [feedback, setFeedback] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  const reserve = import.meta.env.VITE_RESERVE_API;
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -26,15 +25,18 @@ const Reserve = () => {
     e.preventDefault();
     try {
       setIsLoading(true);
-      const response = await fetch(reserve, {
-        method: 'POST',
-        headers: {
-          'content-type': 'application/json',
-        },
-        body: JSON.stringify({
-          ...form,
-        }),
-      });
+      const response = await fetch(
+        'https://dsacorp-server.vercel.app/api/v1/dsacorp/newUser',
+        {
+          method: 'POST',
+          headers: {
+            'content-type': 'application/json',
+          },
+          body: JSON.stringify({
+            ...form,
+          }),
+        }
+      );
 
       const data = await response.json();
       const feed = data.message;
