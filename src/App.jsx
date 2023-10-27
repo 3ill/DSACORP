@@ -1,6 +1,7 @@
 import { Home, Reserve, LearnMore } from './pages';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Analytics } from '@vercel/analytics/react';
+import { Toaster } from 'react-hot-toast';
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
           <Route path="/learn" element={<LearnMore />} />
         </Routes>
         <Analytics />
+        <Toaster position="bottom-right" />
       </main>
     </Router>
   );

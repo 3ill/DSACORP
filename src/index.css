@@ -54,6 +54,12 @@
   animation: pulse-animation 0.7s infinite;
 }
 
+.tweetStyle .react-tweet-theme {
+  --tweet-body-font-size: 1rem;
+  --tweet-bg-color: #0000;
+  --tweet-font-family: 'Sans Serif';
+}
+
 @layer utilities {
   .padding {
     @apply sm:px-16 px-8 sm:py-24 py-12;
@@ -91,11 +97,23 @@
     @apply text-white text-[30px] lg:text-[50px] md:text-[40px] font-Azeret font-extrabold;
   }
 
+  .bullet-text {
+    @apply text-white-400 font-semibold;
+  }
+
+  .subheader-text {
+    @apply text-white-400 text-[20px] lg:text-[45px] md:text-[35px] font-Azeret font-bold;
+  }
+
+  .mini-header-text {
+    @apply text-white-400 text-[15px] lg:text-[40px] md:text-[30px] font-Azeret font-bold;
+  }
+
   .sub-text {
-    @apply info-text text-left text-sm md:text-lg lg:text-[25px] lg:max-w-[1400px] md:max-w-[700px] md:leading-7 lg:leading-9 max-sm:max-w-[300px];
+    @apply info-text text-left text-sm md:text-lg lg:text-[25px] lg:max-w-[1400px] md:max-w-[700px] md:leading-7 lg:leading-9 max-sm:max-w-[400px];
   }
 
   .guide-text {
-    @apply text-gray-300 font-medium hover:animate-pulse;
+    @apply text-gray-400 font-medium hover:animate-pulse;
   }
 }

@@ -4,21 +4,21 @@ import { motion } from 'framer-motion';
 import { staggerContainer } from '../utils/motion';
 import { TypingText, TitleText } from '../components/CustomTexts';
 import { instagram, user, mail } from '../assets/icons';
+import toast from 'react-hot-toast';
 
 import { Footer } from '../sections';
 
 const Reserve = () => {
-  const [form, setForm] = useState({
+  const [values, setValues] = useState({
     name: '',
     email: '',
     social: '',
   });
 
-  const [feedback, setFeedback] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
+    setValues({ ...values, [e.target.name]: e.target.value });
   };
 
   const handleReserveClick = async (e) => {
@@ -33,14 +33,14 @@ const Reserve = () => {
             'content-type': 'application/json',
           },
           body: JSON.stringify({
-            ...form,
+            ...values,
           }),
         }
       );
 
       const data = await response.json();
       const feed = data.message;
-      setFeedback(feed);
+      toast.success(feed);
     } catch (error) {
       console.error(error);
     } finally {
@@ -80,15 +80,17 @@ const Reserve = () => {
           </h1>
           <div className="flex flex-row gap-3 mt-2 items-center">
             <img src={user} alt="user" className="w-[45px] h-[40px]" />
-            <input
-              type="text"
-              name="name"
-              value={form.name}
-              onChange={handleChange}
-              required
-              placeholder="name"
-              className="font-Azeret text-slate-gray bg-transparent text-[12px] tracking-wide max-w-sm"
-            />
+            <form>
+              <input
+                type="text"
+                name="name"
+                value={values.name}
+                onChange={handleChange}
+                required
+                placeholder="name"
+                className="font-Azeret text-slate-gray bg-transparent text-[12px] tracking-wide   outline-none max-w-sm"
+              />
+            </form>
           </div>
 
           <hr className="mt-2" />
@@ -98,11 +100,11 @@ const Reserve = () => {
             <input
               type="text"
               name="email"
-              value={form.email}
+              value={values.email}
               onChange={handleChange}
               required
               placeholder="email"
-              className="font-Azeret text-slate-gray text-[12px] tracking-wide bg-transparent max-w-sm"
+              className="font-Azeret text-slate-gray text-[12px] tracking-wide bg-transparent  outline-none max-w-sm"
             />
           </div>
 
@@ -113,11 +115,11 @@ const Reserve = () => {
             <input
               type="text"
               name="social"
-              value={form.social}
+              value={values.social}
               onChange={handleChange}
               required
               placeholder="instagram handle"
-              className="font-Azeret text-slate-gray text-[12px] tracking-wide bg-transparent max-w-sm"
+              className="font-Azeret text-slate-gray text-[12px] tracking-wide bg-transparent outline-none max-w-sm"
             />
           </div>
 
@@ -125,31 +127,27 @@ const Reserve = () => {
 
           <div className=" justify-center items-center self-center mt-10">
             <button
-              disabled={!form.name || !form.email || !form.social}
+              disabled={!values.name || !values.email || !values.social}
               className="flex items-center justify-center border border-secondary rounded-[9px] w-[138px] h-[40px] group hover:scale-110 active:scale-105 transition shadow-md  "
               onClick={handleReserveClick}
             >
-              <h1 className="font-Azeret  text-white text-center font-extrabold group-hover:animate-pulse transition">
-                Reserve
-              </h1>
+              {isLoading ? (
+                <div className="h-5 w-5 animate-spin rounded-full border-b-2 border-white"></div>
+              ) : (
+                <h1 className="font-Azeret  text-white text-center font-extrabold group-hover:animate-pulse transition">
+                  Reserve
+                </h1>
+              )}
             </button>
           </div>
         </form>
-        {isLoading && (
-          <p className="text-slate-gray text-[15px] mt-3 mb-3 self-center font-Azeret">
-            Please Wait
-          </p>
-        )}
-        {feedback && (
-          <p className="text-white font-semibold text-[15px] mt-3 mb-3 self-center font-Azeret">
-            {feedback}
-          </p>
-        )}
       </div>
-      <h3 className="font-Azeret text-[20px] text-slate-gray self-center mt-10">
+      <h3 className="font-Azeret text-[20px] text-slate-gray self-center mt-10 mb-[30px]">
         Exclusive Access
       </h3>
-      <Footer />
+      <div className=" pt-[97px]">
+        <Footer />
+      </div>
     </motion.section>
   );
 };

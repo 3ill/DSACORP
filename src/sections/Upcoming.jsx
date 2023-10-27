@@ -16,10 +16,13 @@ const Upcoming = () => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.25 }}
-      className="absolute top-[950px] md:top-[1050px] lg:top-[1240px]"
+      className=" top-[950px] md:top-[1050px] lg:top-[1240px]"
     >
       <div className="flex flex-col  ">
-        <TitleText title="Web3: The Genesis" textStyles="header-text" />
+        <TitleText
+          title="Web3: The Genesis"
+          textStyles="header-text capitalize"
+        />
         <h3 className="sub-text">
           Amidst the intricate tapestry of technical advancements within the
           web3 ecosystem, the pursuit of financial and technological excellence

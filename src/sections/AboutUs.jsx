@@ -11,14 +11,24 @@ const AboutUs = () => {
       whileInView="show"
       viewport={{ once: false, amount: 0.25 }}
     >
-      <div className="flex flex-col absolute top-[200px] lg:top-[350px] md:top-[270px]">
+      <div className="flex flex-col ">
         <TitleText title="About Us" textStyles="header-text" />
-        <h3 className="sub-text">
-          At DSA CORP, we believe that communities are the heartbeat of the Web3
-          revolution. They serve as the catalysts for change, igniting the spark
-          of innovation and collaboration that propels us towards a
-          decentralized future.
-        </h3>
+        <p className="sub-text">
+          Web3 communities <span className="guide-text">drive innovation</span>{' '}
+          by enabling people to{' '}
+          <span className="guide-text">engage, contribute, and govern</span> the
+          systems they believe in.
+          <br />
+          Communities create an ideal environment for various{' '}
+          <span className="guide-text">skills and ideas to unite</span>, leading
+          to a vibrant ecosystem that flourishes through collaboration—a{' '}
+          <span className="guide-text">proven formula for success.</span>
+          <br /> <br />
+          Here at <span className="guide-text">DSA CORP</span>, we are firm
+          believers that communities are at the core of the Web3 transformation.
+          They act as agents of change, igniting the flame of creativity and
+          cooperation, propelling us toward a decentralized future.
+        </p>
 
         <div className="flex mt-3">
           <Download

@@ -1,13 +1,12 @@
-import { useState } from 'react';
 import { Button } from '../components';
 import { motion } from 'framer-motion';
 import { TitleText } from '../components/CustomTexts';
 import { staggerContainer } from '../utils/motion';
+import { useActiveSectionContext } from '../../context/useActiveSectionContext';
+import toast from 'react-hot-toast';
 
 const Subscribe = () => {
-  const [mail, setMail] = useState('');
-  const [feedback, setFeedback] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
+  const { mail, setMail, setIsLoading } = useActiveSectionContext();
 
   const handleInputChange = (e) => {
     e.preventDefault();
@@ -35,9 +34,19 @@ const Subscribe = () => {
 
       const feed = data.message;
 
-      setFeedback(feed);
+      toast.custom((t) => (
+        <div
+          className={`${
+            t.visible ? 'animate-enter' : 'animate-leave'
+          }  bg-gray-300 bg-opacity-30 p-3  text-black border   font-palanquin font-extrabold shadow-lg rounded-lg `}
+        >
+          {feed}
+        </div>
+      ));
     } catch (error) {
       console.error(error);
+
+      toast.error(error);
     } finally {
       setIsLoading(false);
     }
@@ -50,7 +59,7 @@ const Subscribe = () => {
       whileInView="show"
       viewport={{ once: false, amount: 0.25 }}
       id="subscribe"
-      className="absolute  max-sm:top-[1850px] md:top-[1890px] lg:top-[2200px]"
+      className=" md:top-[1890px] lg:top-[2200px]"
     >
       <div className="flex flex-col   ">
         <TitleText
@@ -63,12 +72,13 @@ const Subscribe = () => {
         />
         <form className="flex flex-row justify-between border relative rounded-[20px] px-2 py-2 max-sm:mr-5 lg:max-w-[800px] md:max-w-[700px] max-sm:max-w-sm mt-3  md:gap-[230px]">
           <input
-            type="text"
+            type="email"
+            name="mail"
             value={mail}
             required
             onChange={handleInputChange}
             placeholder="subscribe@dsacorp.com"
-            className="bg-transparent text-slate-gray font-Azeret max-sm:text-[13px] md:text-[15px] lg:text-[17px]  border-none"
+            className="bg-transparent  text-slate-gray font-Azeret max-sm:text-[13px] md:text-[15px] lg:text-[17px] outline-none border-none"
           />
           <div>
             <Button
@@ -80,16 +90,6 @@ const Subscribe = () => {
             />
           </div>
         </form>
-        {isLoading && (
-          <p className="text-slate-gray text-[15px] mt-3 mb-3 self-center font-Azeret">
-            Please Wait
-          </p>
-        )}
-        {feedback && (
-          <p className="text-white font-semibold text-[15px] mt-3 mb-3 self-center font-Azeret">
-            {feedback}
-          </p>
-        )}
       </div>
     </motion.section>
   );

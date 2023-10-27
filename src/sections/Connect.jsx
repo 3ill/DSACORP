@@ -2,23 +2,13 @@ import { IG, Whatsapp, Telegram } from '../assets/icons';
 import { motion } from 'framer-motion';
 import { TitleText } from '../components/CustomTexts';
 import { staggerContainer } from '../utils/motion';
+import {
+  handleInstagramClick,
+  handleTelegramClick,
+  handleWhatsappClick,
+} from '../../actions';
 
 const Connect = () => {
-  const handleWhatsappClick = () => {
-    const url = 'https://chat.whatsapp.com/Bi4oiqSPt1UB3o1ZXAzDlF';
-    window.open(url, '_blank');
-  };
-
-  const handleTelegramClick = () => {
-    const url = 'https://t.me/+rfYhtYKUn_E2NzJk';
-    window.open(url, '_blank');
-  };
-
-  const handleInstagramClick = () => {
-    const url = 'https://www.instagram.com/dsa_corp/';
-    window.open(url, '_blank');
-  };
-
   return (
     <motion.section
       variants={staggerContainer}
@@ -26,8 +16,11 @@ const Connect = () => {
       whileInView="show"
       viewport={{ once: false, amount: 0.25 }}
     >
-      <div className=" flex flex-col max-sm:mt-[500px] md:mt-[290px] lg:mt-[350px] ">
-        <TitleText title="Connect With Us" textStyles="header-text" />
+      <div className=" flex flex-col  ">
+        <TitleText
+          title="Connect With The Community"
+          textStyles="header-text capitalize"
+        />
         <h3 className="sub-text">
           Join a community of like minded individuals to get{' '}
           <span className="guide-text">exclusive perks</span>, updates and
