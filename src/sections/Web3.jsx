@@ -22,7 +22,7 @@ const Web3 = () => {
       </div>
 
       {/**Web 1 section */}
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-2 mt-5">
         <TitleText
           title="Web 1: The internet's infancy"
           textStyles="subheader-text capitalize"
@@ -45,7 +45,7 @@ const Web3 = () => {
       </div>
 
       {/**Web 2 Section */}
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-2 mt-5">
         <TitleText
           title="Web 2: The rise of social interaction"
           textStyles="subheader-text capitalize"
@@ -62,7 +62,7 @@ const Web3 = () => {
       </div>
 
       {/**Web 3 Section */}
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-2 mt-5">
         <TitleText
           title="Web 3: The Decentralized Revolution"
           textStyles="subheader-text capitalize"
@@ -84,7 +84,7 @@ const Web3 = () => {
       </div>
 
       {/**Benefits */}
-      <div className="flex flex-col">
+      <div className="flex flex-col mt-5">
         <TitleText
           title="Key Benefits of Web3:"
           textStyles="subheader-text capitalize"

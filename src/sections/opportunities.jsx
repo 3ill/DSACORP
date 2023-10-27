@@ -42,7 +42,7 @@ const Opportunity = () => {
       </p>
 
       {/**What is an airdrop section */}
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-2 mt-5">
         <TitleText
           title="Airdrops: What's the Buzz?"
           textStyles="subheader-text capitalize"
@@ -64,7 +64,7 @@ const Opportunity = () => {
       </div>
 
       {/**What is a token */}
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-2 mt-5">
         <TitleText
           title="Tokens: The Building Blocks of Web3"
           textStyles="subheader-text capitalize"
@@ -83,7 +83,7 @@ const Opportunity = () => {
       </div>
 
       {/**Opportunities for all */}
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-2 mt-5">
         <TitleText
           title="Opportunities in Web3 for All:"
           textStyles="subheader-text capitalize"
