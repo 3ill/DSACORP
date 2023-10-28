@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 import { staggerContainer } from '../utils/motion';
 import { TypingText, TitleText } from '../components/CustomTexts';
-import { instagram, user, mail } from '../assets/icons';
+import { instagram, user, mail, DSA } from '../assets/icons';
 import toast from 'react-hot-toast';
 
 import { Footer } from '../sections';
@@ -40,9 +40,27 @@ const Reserve = () => {
 
       const data = await response.json();
       const feed = data.message;
-      toast.success(feed);
+      toast.custom((t) => (
+        <div
+          className={`${
+            t.visible ? 'animate-enter' : 'animate-leave'
+          }  bg-black bg-opacity-30 p-3  text-slate-gray border-green-300   font-palanquin font-extrabold shadow-lg rounded-lg flex flex-row justify-between items-center `}
+        >
+          <img src={DSA} className="w-[50px] h-[50px]" />
+          {feed}
+        </div>
+      ));
     } catch (error) {
-      console.error(error);
+      toast.custom((t) => (
+        <div
+          className={`${
+            t.visible ? 'animate-enter' : 'animate-leave'
+          }  bg-black bg-opacity-30 p-3  text-slate-gray border-red-300   font-palanquin font-extrabold shadow-lg rounded-lg flex flex-row justify-between items-center `}
+        >
+          <img src={DSA} className="w-[50px] h-[50px]" />
+          {error}
+        </div>
+      ));
     } finally {
       setIsLoading(false);
     }

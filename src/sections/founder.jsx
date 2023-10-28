@@ -19,14 +19,14 @@ const Founder = () => {
         <p className="sub-text">
           Martins Victor, who goes by the alias{' '}
           <span className="guide-text">DarkSkinAlien</span>, is the founder &
-          CEO of Dsa Corp. <br /> <br /> He is not only a distinguished figure
-          within the Web3 landscape but also functions as a{' '}
-          <span className="guide-text">community engineer</span> and a trusted{' '}
-          <span className="guide-text">Web3 guide</span> with a profound
-          comprehension of Web3&apos;s transformative potential. <br /> <br />{' '}
-          DSA firmly believes in the power of community and collaboration as the
-          cornerstone of success, not only within the dynamic Web3 space but as
-          a fundamental principle that extends to all aspects of life.
+          CEO of <span className="guide-text">DSA CORP</span>. <br /> <br /> He
+          is not only a distinguished figure within the Web3 landscape but also
+          functions as a <span className="guide-text">community engineer</span>{' '}
+          and a trusted <span className="guide-text">Web3 guide</span> with a
+          profound comprehension of Web3&apos;s transformative potential. <br />{' '}
+          <br /> DSA firmly believes in the power of community and collaboration
+          as the cornerstone of success, not only within the dynamic Web3 space
+          but as a fundamental principle that extends to all aspects of life.
         </p>
       </div>
       <div className="flex flex-col">
@@ -41,7 +41,7 @@ const Founder = () => {
           <div className=" pb-5 justify-center items-center flex flex-col ">
             <img
               src={Profile}
-              className="object-cover w-[350px] h-[350px] lg:w-[450px] lg:h-[550px] rounded-[12px] shadow-md"
+              className="object-cover w-[350px] h-[350px] lg:w-[550px] lg:h-[550px] rounded-[9px] shadow-md"
             />
 
             <div className="flex flex-row gap-5 p-2">

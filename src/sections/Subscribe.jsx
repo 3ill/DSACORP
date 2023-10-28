@@ -4,6 +4,7 @@ import { TitleText } from '../components/CustomTexts';
 import { staggerContainer } from '../utils/motion';
 import { useActiveSectionContext } from '../../context/useActiveSectionContext';
 import toast from 'react-hot-toast';
+import { DSA } from '../assets/icons';
 
 const Subscribe = () => {
   const { mail, setMail, setIsLoading } = useActiveSectionContext();
@@ -38,15 +39,25 @@ const Subscribe = () => {
         <div
           className={`${
             t.visible ? 'animate-enter' : 'animate-leave'
-          }  bg-gray-300 bg-opacity-30 p-3  text-black border   font-palanquin font-extrabold shadow-lg rounded-lg `}
+          }  bg-black bg-opacity-30 p-3  text-slate-gray border-green-300   font-palanquin font-extrabold shadow-lg rounded-lg flex flex-row justify-between items-center `}
         >
+          <img src={DSA} className="w-[50px] h-[50px]" />
           {feed}
         </div>
       ));
     } catch (error) {
       console.error(error);
 
-      toast.error(error);
+      toast.custom((t) => (
+        <div
+          className={`${
+            t.visible ? 'animate-enter' : 'animate-leave'
+          }  bg-black bg-opacity-30 p-3  text-slate-gray border-red-300   font-palanquin font-extrabold shadow-lg rounded-lg flex flex-row justify-between items-center `}
+        >
+          <img src={DSA} className="w-[50px] h-[50px]" />
+          {error}
+        </div>
+      ));
     } finally {
       setIsLoading(false);
     }

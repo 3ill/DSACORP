@@ -164,7 +164,7 @@ const Opportunity = () => {
           <br /> Whether you&apos;re technically proficient or not, Web3 offers
           a dynamic space for exploration, learning, and contributing to the
           decentralized future.
-          <br /> At <span className="guide-text">Dsa Corp</span>, it is our
+          <br /> At <span className="guide-text">DSA CORP</span>, it is our
           mission to guide you on this remarkable journey towards Web3&apos;s{' '}
           <span className="guide-text">abundant opportunities</span>.
         </p>
