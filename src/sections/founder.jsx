@@ -24,7 +24,7 @@ const Founder = () => {
           <span className="guide-text">community engineer</span> and a trusted{' '}
           <span className="guide-text">Web3 guide</span> with a profound
           comprehension of Web3&apos;s transformative potential. <br /> <br />{' '}
-          DSA firmly believe in the power of community and collaboration as the
+          DSA firmly believes in the power of community and collaboration as the
           cornerstone of success, not only within the dynamic Web3 space but as
           a fundamental principle that extends to all aspects of life.
         </p>
