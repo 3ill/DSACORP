@@ -20,11 +20,11 @@ const Footer = () => {
         <div className="flex flex-row gap-2 mt-5 items-center">
           <img src={copyright} className="lg:w-[40x] lg:h-[40px]" />
           <p className="text-[10px] md:text-[16px] lg:text-[18px] font-Azeret text-secondary">
-            Copyright. All rights reserved
+            Copyright 2023. All rights reserved
           </p>
         </div>
         <p className="text-[10px]  lg:text-[18px] md:text-[16px] font-Azeret text-secondary mt-3">
-          Subscribe
+          DSA CORP
         </p>
       </div>
     </motion.section>

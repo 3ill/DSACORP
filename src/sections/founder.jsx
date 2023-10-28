@@ -18,9 +18,9 @@ const Founder = () => {
         />
         <p className="sub-text">
           Martins Victor, who goes by the alias{' '}
-          <span className="guide-text">DarkSkinAlien</span>, is the founder &
-          CEO of <span className="guide-text">DSA CORP</span>. <br /> <br /> He
-          is not only a distinguished figure within the Web3 landscape but also
+          <span className="guide-text">DarkSkinAlien</span>, is the founder of{' '}
+          <span className="guide-text">DSA CORP</span>. <br /> <br /> He is not
+          only a distinguished figure within the Web3 landscape but also
           functions as a <span className="guide-text">community engineer</span>{' '}
           and a trusted <span className="guide-text">Web3 guide</span> with a
           profound comprehension of Web3&apos;s transformative potential. <br />{' '}

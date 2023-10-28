@@ -39,7 +39,7 @@ const Subscribe = () => {
         <div
           className={`${
             t.visible ? 'animate-enter' : 'animate-leave'
-          }  bg-black bg-opacity-30 p-3  text-slate-gray border-green-300   font-palanquin font-extrabold shadow-lg rounded-lg flex flex-row justify-between items-center `}
+          }  bg-gray-800 bg-opacity-30 p-3  text-slate-gray border-green-300   font-palanquin font-extrabold shadow-lg rounded-lg flex flex-row justify-between items-center `}
         >
           <img src={DSA} className="w-[50px] h-[50px]" />
           {feed}
@@ -52,7 +52,7 @@ const Subscribe = () => {
         <div
           className={`${
             t.visible ? 'animate-enter' : 'animate-leave'
-          }  bg-black bg-opacity-30 p-3  text-slate-gray border-red-300   font-palanquin font-extrabold shadow-lg rounded-lg flex flex-row justify-between items-center `}
+          }  bg-gray-800 bg-opacity-30 p-3  text-slate-gray border-red-300   font-palanquin font-extrabold shadow-lg rounded-lg flex flex-row justify-between items-center `}
         >
           <img src={DSA} className="w-[50px] h-[50px]" />
           {error}

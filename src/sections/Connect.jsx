@@ -1,4 +1,4 @@
-import { IG, Whatsapp, Telegram } from '../assets/icons';
+import { Whatsapp, Telegram, discord, instagram } from '../assets/icons';
 import { motion } from 'framer-motion';
 import { TitleText } from '../components/CustomTexts';
 import { staggerContainer } from '../utils/motion';
@@ -6,6 +6,7 @@ import {
   handleInstagramClick,
   handleTelegramClick,
   handleWhatsappClick,
+  handleDiscordClick,
 } from '../../actions';
 
 const Connect = () => {
@@ -29,7 +30,7 @@ const Connect = () => {
 
         <div className="flex flex-row gap-2  mt-[7px]">
           <img
-            src={IG}
+            src={instagram}
             alt="instagram"
             className="w-[50px] h-[50px] lg:w-[80px] lg:h-[80px] hover:animate-pulse hover:scale-110 active:scale-105 transition"
             onClick={handleInstagramClick}
@@ -46,6 +47,12 @@ const Connect = () => {
             alt="telegram"
             className="w-[50px] h-[50px] lg:w-[80px] lg:h-[80px] hover:animate-pulse hover:scale-110 active:scale-105 transition"
             onClick={handleTelegramClick}
+          />
+          <img
+            src={discord}
+            alt="discord"
+            className="w-[50px] h-[50px] lg:w-[80px] lg:h-[80px] hover:animate-pulse hover:scale-110 active:scale-105 transition"
+            onClick={handleDiscordClick}
           />
         </div>
       </div>

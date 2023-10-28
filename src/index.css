@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Palanquin:wght@100;200;300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400;500;600;700;800&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,300,400&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -90,7 +91,7 @@
   }
 
   .info-text {
-    @apply font-montserrat text-slate-gray;
+    @apply font-satoshi font-medium text-slate-gray;
   }
 
   .header-text {
