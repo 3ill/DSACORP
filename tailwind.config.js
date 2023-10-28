@@ -19,6 +19,7 @@ export default {
         montserrat: ['Montserrat', 'sans-serif'],
         orbitron: ['Orbitron', 'sans-serif'],
         Azeret: ['Azeret Mono', 'Monospace'],
+        satoshi: ['Satoshi', 'sans-serif'],
       },
       colors: {
         primary: '#ECEEFF',
