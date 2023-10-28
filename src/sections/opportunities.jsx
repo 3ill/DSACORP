@@ -18,13 +18,13 @@ const Opportunity = () => {
         textStyles="header-text capitalize"
       />
       <p className="sub-text">
-        In March, the crypto world was abuzz with Arbitrum&apos;s exciting move
-        – issuing and airdropping its tokens to individual users. These tokens
-        were distributed based on network activity and the number of wallets,
-        with lucky users receiving anywhere from{' '}
+        In March 2023, the crypto world was abuzz with Arbitrum&apos;s exciting
+        move – issuing and airdropping its tokens to individual users. These
+        tokens were distributed based on network activity and the number of
+        wallets, with lucky users receiving anywhere from{' '}
         <span className="guide-text">625 to over 10,000 Arb</span> tokens.
         Eligible projects were also awarded a substantial share – approximately
-        <span className="guide-text">2.7 million Arb</span> tokens, valued at
+        <span className="guide-text"> 2.7 million Arb</span> tokens, valued at
         nearly <span className="guide-text">$6 million.</span>
       </p>
       <div>
