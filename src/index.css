@@ -63,7 +63,7 @@
 
 @layer utilities {
   .padding {
-    @apply sm:px-16 px-8 sm:py-24 py-12;
+    @apply sm:px-16 px-8 sm:py-24 py-20;
   }
 
   .padding-x {
@@ -103,7 +103,7 @@
   }
 
   .subheader-text {
-    @apply text-white-400 text-[20px] lg:text-[45px] md:text-[35px] font-Azeret font-bold;
+    @apply text-white-400  lg:text-[25px] md:text-[25px] max-sm:text-[16px] font-Azeret font-bold;
   }
 
   .mini-header-text {

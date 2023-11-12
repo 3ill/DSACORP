@@ -6,10 +6,12 @@ import { staggerContainer } from '../utils/motion';
 const AboutUs = () => {
   return (
     <motion.section
+      id="about"
       variants={staggerContainer}
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.25 }}
+      className="max-sm:-mt-[50px]"
     >
       <div className="flex flex-col ">
         <TitleText title="About Us" textStyles="header-text" />

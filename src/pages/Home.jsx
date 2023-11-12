@@ -18,7 +18,7 @@ const Home = () => {
     <>
       <ActiveSectionProvider>
         <Nav />
-        <section className="xl:padding-l wide:padding-r ">
+        <section className=" ">
           <Hero />
         </section>
         <section className="padding-x py-10">

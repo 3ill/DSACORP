@@ -5,6 +5,7 @@ import { staggerContainer, slideIn } from '../utils/motion';
 const Web3 = () => {
   return (
     <motion.section
+      id="web3"
       variants={staggerContainer}
       initial="hidden"
       whileInView="show"
@@ -25,7 +26,7 @@ const Web3 = () => {
       <div className="flex flex-col gap-2 mt-5">
         <TitleText
           title="Web 1: The internet's infancy"
-          textStyles="subheader-text capitalize"
+          textStyles="subheader-text  capitalize"
         />
         <p className="sub-text">
           In the early days of the internet, often referred to as &quot;Web

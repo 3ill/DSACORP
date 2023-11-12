@@ -12,6 +12,7 @@ import {
 const Connect = () => {
   return (
     <motion.section
+      id="connect"
       variants={staggerContainer}
       initial="hidden"
       whileInView="show"
