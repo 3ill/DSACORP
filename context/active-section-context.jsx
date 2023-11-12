@@ -5,6 +5,8 @@ export const ActiveSectionContext = createContext(null);
 const ActiveSectionProvider = ({ children }) => {
   const [mail, setMail] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [isActive, setIsActive] = useState('');
+  const [isToggled, setIsToggled] = useState(true);
 
   return (
     <ActiveSectionContext.Provider
@@ -13,6 +15,10 @@ const ActiveSectionProvider = ({ children }) => {
         setMail,
         isLoading,
         setIsLoading,
+        isActive,
+        setIsActive,
+        isToggled,
+        setIsToggled,
       }}
     >
       {children}
