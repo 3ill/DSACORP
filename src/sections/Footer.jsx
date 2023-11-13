@@ -10,7 +10,7 @@ const Footer = () => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.25 }}
-      className=" sm:h-[30px] lg:h-[80px] md:h-[50px] "
+      className=" sm:h-[30px] lg:h-[80px] md:h-[50px]"
     >
       <div className="flex flex-col justify-center items-center">
         <TypingText

@@ -42,6 +42,7 @@ const Home = () => {
         <section className="padding-x py-10 ">
           <Subscribe />
         </section>
+
         <section className=" padding bg-black">
           <Footer />
         </section>
