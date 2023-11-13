@@ -18,7 +18,7 @@ const Nav = () => {
     <motion.nav
       variants={navVariants}
       whileInView="show"
-      className=" padding-x py-8 absolute z-10 w-full"
+      className=" padding-x py-8 absolute z-10 w-full items-center"
     >
       <div className="flex flex-row gap-2 justify-between max-sm:hidden items-center">
         <img src={DSA} alt="logo" width={80} height={80} />
@@ -42,7 +42,7 @@ const Nav = () => {
           ))}
         </ul>
       </div>
-      <div className="fixed top-0 w-full bg-secondary bg-opacity-60 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] max-sm:top-6 max-sm:h-[3.25rem] max-sm:w-[20rem] max-sm:rounded-full md:hidden items-center ">
+      <div className="fixed top-0  bg-secondary bg-opacity-60 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] max-sm:top-4 max-sm:h-[3.25rem] self-center max-sm:w-[22rem] max-sm:rounded-full md:hidden items-center ">
         <div className="flex flex-row justify-between px-2 items-center py-3">
           <img src={DSA} alt="logo" width={40} height={40} />
 
