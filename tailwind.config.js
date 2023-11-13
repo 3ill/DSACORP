@@ -20,6 +20,7 @@ export default {
         orbitron: ['Orbitron', 'sans-serif'],
         Azeret: ['Azeret Mono', 'Monospace'],
         satoshi: ['Satoshi', 'sans-serif'],
+        allura: ['Allura', 'cursive'],
       },
       colors: {
         primary: '#ECEEFF',
