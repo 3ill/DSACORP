@@ -42,9 +42,15 @@ const Nav = () => {
           ))}
         </ul>
       </div>
-      <div className="fixed top-0  bg-secondary bg-opacity-60 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] max-sm:top-4 max-sm:h-[3.25rem] self-center max-sm:w-[22rem] max-sm:rounded-full md:hidden items-center ">
+      <div className="fixed left-[24px] top-0  bg-secondary bg-opacity-50 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] max-sm:top-4 max-sm:h-[3.25rem] self-center max-sm:w-[22rem] max-sm:rounded-full md:hidden items-center ">
         <div className="flex flex-row justify-between px-2 items-center py-3">
-          <img src={DSA} alt="logo" width={40} height={40} />
+          <img
+            src={DSA}
+            alt="logo"
+            width={40}
+            height={40}
+            className=" hover:animate-spin"
+          />
 
           {isToggled ? (
             <RxHamburgerMenu
@@ -63,17 +69,41 @@ const Nav = () => {
       </div>
 
       <div>
-        {/* {!isToggled && (
-          <div className="lg:hidden md:hidden absolute top-[115px] right-[30px]">
-            <Button
-              href="#subscribe"
-              title="subscribe"
-              background="bg-transparent"
-              animate="animate-slide-down"
-              textColor="text-white"
-            />
-          </div>
-        )} */}
+        {!isToggled && (
+          <>
+            <motion.div
+              initial={{ y: -100, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              className="fixed top-9 left-[24px] p-5  w-[22rem] h-[15rem]  shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] bg-secondary dark:border-black/40 bg-opacity-80 md:hidden items-end  z-[-999] rounded-[9px]"
+            ></motion.div>
+
+            <motion.nav
+              initial={{ y: -100, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              className="flex flex-col top-[90px] left-[270px] fixed md:hidden "
+            >
+              <ul className="flex flex-col gap-1">
+                {navLinks.map((link) => (
+                  <a
+                    href={link.hash}
+                    key={link.name}
+                    onClick={() => setIsActive(link.name)}
+                  >
+                    <p
+                      className={`${
+                        isActive === link.name
+                          ? ' text-white font-bold font-satoshi lg:text-[20px] md:text-[16px] hover:text-white hover:scale-110 active:scale-105 transition-all'
+                          : ' text-black font-bold font-satoshi lg:text-[20px] md:text-[16px] hover:text-white hover:scale-110 active:scale-105'
+                      }`}
+                    >
+                      {link.name}
+                    </p>
+                  </a>
+                ))}
+              </ul>
+            </motion.nav>
+          </>
+        )}
       </div>
     </motion.nav>
   );
