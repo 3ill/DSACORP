@@ -42,7 +42,7 @@ const Nav = () => {
           ))}
         </ul>
       </div>
-      <div className="fixed left-[26px] right-[10px] top-0  bg-secondary bg-opacity-50 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] max-sm:top-4 max-sm:h-[3.25rem] self-center max-sm:w-[22rem] max-sm:rounded-full md:hidden items-center ">
+      <div className="fixed left-[28px] right-[10px] top-0  bg-secondary bg-opacity-50 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] max-sm:top-4 max-sm:h-[3.25rem] self-center max-sm:w-[22rem] max-sm:rounded-full md:hidden items-center ">
         <div className="flex flex-row justify-between px-2 items-center py-3">
           <img
             src={DSA}
@@ -74,7 +74,7 @@ const Nav = () => {
             <motion.div
               initial={{ y: -100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              className="fixed top-9 left-[26px]  p-5  w-[22rem] h-[15rem]  shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] bg-secondary dark:border-black/40 bg-opacity-80 md:hidden items-end  z-[-999] rounded-[9px]"
+              className="fixed top-9 left-[28px]  p-5  w-[22rem] h-[15rem]  shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] bg-secondary dark:border-black/40 bg-opacity-80 md:hidden items-end  z-[-999] rounded-[9px]"
             ></motion.div>
 
             <motion.nav
