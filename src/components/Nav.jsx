@@ -74,7 +74,7 @@ const Nav = () => {
             <motion.div
               initial={{ y: -100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              className="fixed top-9 left-[28px]  p-5  w-[22rem] h-[15rem]  shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] bg-secondary dark:border-black/40 bg-opacity-80 md:hidden items-end  z-[-999] rounded-[9px]"
+              className="fixed top-9 left-[28px]  p-5  w-[22rem] h-[15rem]  shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] bg-secondary dark:border-black/40 bg-opacity-50 md:hidden items-end  z-[-999] rounded-[9px]"
             ></motion.div>
 
             <motion.nav
