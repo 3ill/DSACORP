@@ -4,7 +4,6 @@ import { navVariants } from '../utils/motion';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { RiCloseFill } from 'react-icons/ri';
 import { navLinks } from '../../constants';
-// import Button from './Button';
 import { DSA } from '../assets/icons';
 
 const Nav = () => {
