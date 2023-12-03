@@ -8,6 +8,7 @@ import {
   Founder,
   Connect,
   Subscribe,
+  Feedback,
   Footer,
 } from '../sections';
 import { Toaster } from 'react-hot-toast';
@@ -42,7 +43,7 @@ const Home = () => {
         <section className="padding-x py-10 ">
           <Subscribe />
         </section>
-
+        <Feedback />
         <section className=" padding bg-black">
           <Footer />
         </section>

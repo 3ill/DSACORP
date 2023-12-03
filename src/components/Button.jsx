@@ -1,5 +1,3 @@
-import { useActiveSectionContext } from '../../context/useActiveSectionContext';
-
 const Button = ({
   title,
   background,
@@ -8,8 +6,8 @@ const Button = ({
   href,
   animate,
   disabled,
+  isLoading,
 }) => {
-  const { isLoading } = useActiveSectionContext();
   return (
     <button disabled={disabled} type="submit">
       <a

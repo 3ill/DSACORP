@@ -6,6 +6,7 @@ import Upcoming from './Upcoming';
 import Founder from './founder';
 import Connect from './Connect';
 import Subscribe from './Subscribe';
+import Feedback from './Feedback';
 import Footer from './Footer';
 
 export {
@@ -17,5 +18,6 @@ export {
   Founder,
   Connect,
   Subscribe,
+  Feedback,
   Footer,
 };

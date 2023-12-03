@@ -4,7 +4,10 @@ export const ActiveSectionContext = createContext(null);
 
 const ActiveSectionProvider = ({ children }) => {
   const [mail, setMail] = useState('');
+  const [feedback, setFeedback] = useState('');
+  const [feedbackMail, setFeedbackMail] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [isFeedbackLoading, setIsFeedbackLoading] = useState(false);
   const [isActive, setIsActive] = useState('');
   const [isToggled, setIsToggled] = useState(true);
 
@@ -13,8 +16,14 @@ const ActiveSectionProvider = ({ children }) => {
       value={{
         mail,
         setMail,
+        feedbackMail,
+        setFeedbackMail,
+        feedback,
+        setFeedback,
         isLoading,
         setIsLoading,
+        isFeedbackLoading,
+        setIsFeedbackLoading,
         isActive,
         setIsActive,
         isToggled,

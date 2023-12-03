@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 
 import { staggerContainer } from '../utils/motion';
 import { TypingText, TitleText } from '../components/CustomTexts';
-import { instagram, user, mail, DSA } from '../assets/icons';
-import toast from 'react-hot-toast';
+import { instagram, user, mail } from '../assets/icons';
+import { ToastError, ToastMessage } from '../utils/ToastMessage';
 
 import { Footer } from '../sections';
 
@@ -16,6 +16,8 @@ const Reserve = () => {
   });
 
   const [isLoading, setIsLoading] = useState(false);
+  const [feed, setFeed] = useState('');
+  const [error, setError] = useState('');
 
   const handleChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
@@ -39,28 +41,9 @@ const Reserve = () => {
       );
 
       const data = await response.json();
-      const feed = data.message;
-      toast.custom((t) => (
-        <div
-          className={`${
-            t.visible ? 'animate-enter' : 'animate-leave'
-          }  bg-gray-800 bg-opacity-30 p-3  text-slate-gray border-green-300   font-palanquin font-extrabold shadow-lg rounded-lg flex flex-row justify-between items-center `}
-        >
-          <img src={DSA} className="w-[50px] h-[50px]" />
-          {feed}
-        </div>
-      ));
+      setFeed(data.message);
     } catch (error) {
-      toast.custom((t) => (
-        <div
-          className={`${
-            t.visible ? 'animate-enter' : 'animate-leave'
-          }  bg-gray-800 bg-opacity-30 p-3  text-slate-gray border-red-300   font-palanquin font-extrabold shadow-lg rounded-lg flex flex-row justify-between items-center `}
-        >
-          <img src={DSA} className="w-[50px] h-[50px]" />
-          {error}
-        </div>
-      ));
+      setError(error);
     } finally {
       setIsLoading(false);
     }
@@ -166,6 +149,8 @@ const Reserve = () => {
       <div className=" pt-[97px]">
         <Footer />
       </div>
+      {feed && <ToastMessage message={feed} />}
+      {error && <ToastError errorMessage="An error occurred" />}
     </motion.section>
   );
 };

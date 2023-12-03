@@ -7,7 +7,7 @@ import toast from 'react-hot-toast';
 import { DSA } from '../assets/icons';
 
 const Subscribe = () => {
-  const { mail, setMail, setIsLoading } = useActiveSectionContext();
+  const { mail, setMail, setIsLoading, isLoading } = useActiveSectionContext();
 
   const handleInputChange = (e) => {
     e.preventDefault();
@@ -16,7 +16,6 @@ const Subscribe = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(mail);
 
     try {
       setIsLoading(true);
@@ -32,7 +31,6 @@ const Subscribe = () => {
       );
 
       const data = await response.json();
-
       const feed = data.message;
 
       toast.custom((t) => (
@@ -47,7 +45,6 @@ const Subscribe = () => {
       ));
     } catch (error) {
       console.error(error);
-
       toast.custom((t) => (
         <div
           className={`${
@@ -97,6 +94,7 @@ const Subscribe = () => {
               background="bg-secondary"
               textColor="text-black"
               onClick={handleSubmit}
+              isLoading={isLoading}
               disabled={!mail}
             />
           </div>
