@@ -1,13 +1,13 @@
-import { Whatsapp, Telegram, discord, instagram } from '../assets/icons';
+import { Telegram, discord, instagram } from '../assets/icons';
 import { motion } from 'framer-motion';
 import { TitleText } from '../components/CustomTexts';
 import { staggerContainer } from '../utils/motion';
 import {
   handleInstagramClick,
   handleTelegramClick,
-  handleWhatsappClick,
   handleDiscordClick,
 } from '../../actions';
+import EarthCanvas from '../components/canvas/Earth';
 
 const Connect = () => {
   return (
@@ -38,12 +38,6 @@ const Connect = () => {
           />
 
           <img
-            src={Whatsapp}
-            alt="whatsapp"
-            className="w-[50px] h-[50px] lg:w-[80px] lg:h-[80px] hover:animate-pulse hover:scale-110 active:scale-105 transition"
-            onClick={handleWhatsappClick}
-          />
-          <img
             src={Telegram}
             alt="telegram"
             className="w-[50px] h-[50px] lg:w-[80px] lg:h-[80px] hover:animate-pulse hover:scale-110 active:scale-105 transition"
@@ -55,6 +49,9 @@ const Connect = () => {
             className="w-[50px] h-[50px] lg:w-[80px] lg:h-[80px] hover:animate-pulse hover:scale-110 active:scale-105 transition"
             onClick={handleDiscordClick}
           />
+        </div>
+        <div className="w-[300px] h-[300px] mt-[30px] ">
+          <EarthCanvas scaleValue={3.0} />
         </div>
       </div>
     </motion.section>

@@ -14,7 +14,7 @@ const Button = ({
     <button disabled={disabled} type="submit">
       <a
         href={href}
-        className={`${background}  ${animate} border border-secondary rounded-[20px] flex items-center px-5 py-3 shadow-md group hover:scale-110 active:scale-105 transition outline-none ${
+        className={`${background}  ${animate} border border-secondary rounded-[20px] flex items-center px-5 py-3 shadow-md group hover:scale-110 active:scale-105 transition outline-none w-auto ${
           isLoading ? 'bg-opacity-65 backdrop-blur-sm' : ''
         }`}
         onClick={onClick}

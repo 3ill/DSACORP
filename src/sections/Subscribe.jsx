@@ -81,15 +81,15 @@ const Subscribe = () => {
           }
           textStyles="header-text"
         />
-        <form className="flex flex-row justify-between border relative rounded-[20px] px-2 py-2 max-sm:mr-5 lg:max-w-[800px] md:max-w-[700px] max-sm:max-w-sm mt-3  md:gap-[230px]">
+        <form className="flex flex-row justify-between border relative rounded-[20px] px-2 py-2  lg:max-w-[800px] md:max-w-[700px] max-sm:w-auto mt-3  md:gap-[230px]">
           <input
             type="email"
             name="mail"
             value={mail}
             required
             onChange={handleInputChange}
-            placeholder="subscribe@dsacorp.com"
-            className="bg-transparent  text-slate-gray font-Azeret max-sm:text-[13px] md:text-[15px] lg:text-[17px] outline-none border-none"
+            placeholder="@dsacorp.com"
+            className="bg-transparent text-slate-gray font-Azeret max-sm:text-[13px] md:text-[15px] lg:text-[17px] outline-none border-none"
           />
           <div>
             <Button
