@@ -90,9 +90,7 @@ const Subscribe = () => {
           />
           <div>
             <Button
-              title="Subscribe"
               background="bg-secondary"
-              textColor="text-black"
               onClick={handleSubmit}
               isLoading={isLoading}
               disabled={!mail}

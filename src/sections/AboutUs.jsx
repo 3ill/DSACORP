@@ -2,8 +2,34 @@ import { Download } from '../components';
 import { motion } from 'framer-motion';
 import { TitleText } from '../components/CustomTexts';
 import { staggerContainer } from '../utils/motion';
+import { useGSAP } from '@gsap/react';
+import { useRef } from 'react';
+import gsap from 'gsap';
 
 const AboutUs = () => {
+  const scrollRef = useRef();
+  useGSAP(() => {
+    gsap.fromTo(
+      '#para',
+      {
+        opacity: 0,
+        y: 20,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        delay: 2,
+        stagger: 0.1,
+        ease: 'power1.inOut',
+      }
+    );
+
+    gsap.to('#learn', {
+      opacity: 1,
+      ease: 'power1.inOut',
+      delay: 2.5,
+    });
+  }, []);
   return (
     <motion.section
       id="about"
@@ -13,9 +39,9 @@ const AboutUs = () => {
       viewport={{ once: false, amount: 0.25 }}
       className="max-sm:-mt-[50px]"
     >
-      <div className="flex flex-col ">
+      <div id="trigger" className="flex flex-col " ref={scrollRef}>
         <TitleText title="About Us" textStyles="header-text" />
-        <p className="sub-text">
+        <p id="para" className="sub-text">
           Web3 communities <span className="guide-text">drive innovation</span>{' '}
           by enabling people to{' '}
           <span className="guide-text">engage, contribute, and govern</span> the
@@ -32,7 +58,7 @@ const AboutUs = () => {
           cooperation, propelling us toward a decentralized future.
         </p>
 
-        <div className="flex mt-3">
+        <div id="learn" className="flex mt-3 opacity-0">
           <Download
             title="Learn More"
             background="bg-secondary"

@@ -1,8 +1,40 @@
 import { motion } from 'framer-motion';
 import { TitleText } from '../components/CustomTexts';
 import { staggerContainer, slideIn } from '../utils/motion';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 
 const Web3 = () => {
+  useGSAP(() => {
+    gsap.fromTo(
+      '#para1',
+      {
+        opacity: 0,
+        y: 20,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        delay: 0.5,
+        stagger: 0.1,
+        ease: 'power1.inOut',
+      }
+    );
+    gsap.fromTo(
+      '.sub-text',
+      {
+        opacity: 0,
+        y: 20,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        delay: 0.5,
+        stagger: 0.1,
+        ease: 'power1.inOut',
+      }
+    );
+  });
   return (
     <motion.section
       id="web3"
@@ -14,7 +46,7 @@ const Web3 = () => {
     >
       <div className="flex flex-col gap-2">
         <TitleText title="What is Web3?" textStyles="header-text capitalize" />
-        <p className="sub-text">
+        <p id="para1" className="sub-text">
           The internet has come a long way, evolving through distinct phases,
           each bringing its own set of capabilities and limitations.
           Understanding this journey is crucial in appreciating the

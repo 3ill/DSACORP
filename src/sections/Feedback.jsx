@@ -3,6 +3,7 @@ import { TitleText } from '../components/CustomTexts';
 import { staggerContainer } from '../utils/motion';
 import { useActiveSectionContext } from '../../context/useActiveSectionContext';
 import { Button } from '../components';
+// import { SendFeedback } from '../../actions/SendEmail';
 
 const Feedback = () => {
   const {
@@ -24,11 +25,15 @@ const Feedback = () => {
     setFeedback(e.target.value);
   };
 
-  const handleFeedbackSubmit = (e) => {
+  const handleFeedbackSubmit = async (e) => {
     e.preventDefault();
     try {
       setIsFeedbackLoading(true);
-      console.log(feedbackMail, feedback);
+      // const { error } = await SendFeedback(feedback, feedbackMail);
+      // if (error) {
+      //   console.error(error);
+      //   return;
+      // }
     } catch (error) {
       console.error(error);
     } finally {
@@ -44,13 +49,13 @@ const Feedback = () => {
       className="flex flex-col gap-5 padding-x mt-[52px]"
     >
       <TitleText title="Feedback" textStyles="header-text" />
-      <div className="flex justify-center">
+      <div className="flex justify-center lg:justify-start md:justify-start">
         <h3 className=" capitalize subheader-text">
           Have we been of any help?
         </h3>
       </div>
       <form className="flex flex-col justify-center gap-7">
-        <div className="border border-slate-gray w-auto py-5 rounded-[20px] bg-slate-gray bg-opacity-30 backdrop-blur-md text-gray-300 ">
+        <div className="border border-slate-gray w-auto max-sm:max-w-[300px] md:max-w-full lg:max-w-[800px] py-5 rounded-[20px] bg-slate-gray bg-opacity-30 backdrop-blur-md text-gray-300 ">
           <input
             type="text"
             value={feedbackMail}
@@ -60,7 +65,7 @@ const Feedback = () => {
           />
         </div>
 
-        <div className="border border-slate-gray w-auto h-[300px] py-5 rounded-[20px] bg-slate-gray bg-opacity-30 backdrop-blur-md text-gray-300">
+        <div className="border border-slate-gray w-auto max-w-[300px] h-[300px] py-5 max-sm:max-w-[300px] md:max-w-full lg:max-w-[800px] rounded-[20px] bg-slate-gray bg-opacity-30 backdrop-blur-md text-gray-300">
           <input
             type="text"
             value={feedback}
@@ -69,7 +74,7 @@ const Feedback = () => {
             className=" bg-transparent outline-none ml-5 placeholder:font-Azeret max-w-[250px] "
           />
         </div>
-        <div className="flex self-center">
+        <div className="flex self-center lg:self-start max-w-[100px]">
           <Button
             title="Submit"
             background="bg-slate-gray"
