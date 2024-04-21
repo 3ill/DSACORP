@@ -47,9 +47,9 @@ const AboutUs = () => {
         <TitleText title="About Us" textStyles="header-text" />
         <p id="para" className="sub-text">
           <span className="guide-text">Dsacorp is a mastermind community</span>{' '}
-          that aims to enable its members to navigate the web3 ecosystem safely.
-          We are a group of like-minded individuals who believe in the potential
-          of web3 and{' '}
+          that aims to enable its members navigate the web3 ecosystem safely. We
+          are a group of like-minded individuals who believe in the potential of
+          web3 and{' '}
           <span className="guide-text">
             share tips on how to successfully participate
           </span>{' '}
