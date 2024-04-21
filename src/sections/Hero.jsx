@@ -6,13 +6,13 @@ const Hero = () => {
   useGSAP(() => {
     gsap.to('#big_text', {
       opacity: 1,
-      delay: 2,
+      delay: 0.7,
       scale: 1.3,
       ease: 'power1.out',
     });
     gsap.to('#small_text', {
       opacity: 1,
-      delay: 2.5,
+      delay: 0.8,
     });
   }, []);
   return (

@@ -22,7 +22,7 @@ const Home = () => {
         <section className=" ">
           <Hero />
         </section>
-        <section className="padding-x py-10">
+        <section className="flex flex-col padding-x justify-center py-10">
           <AboutUs />
         </section>
         <section className="padding-x py-10">

@@ -5,9 +5,13 @@ import { staggerContainer } from '../utils/motion';
 import { useGSAP } from '@gsap/react';
 import { useRef } from 'react';
 import gsap from 'gsap';
-
+import { heroVideo } from '../assets';
 const AboutUs = () => {
   const scrollRef = useRef();
+  const videoRef = useRef(null);
+
+  const handlePlay = () => videoRef.current.play();
+  const handlePause = () => videoRef.current.pause();
   useGSAP(() => {
     gsap.fromTo(
       '#para',
@@ -18,7 +22,7 @@ const AboutUs = () => {
       {
         opacity: 1,
         y: 0,
-        delay: 2,
+        delay: 0.8,
         stagger: 0.1,
         ease: 'power1.inOut',
       }
@@ -27,7 +31,7 @@ const AboutUs = () => {
     gsap.to('#learn', {
       opacity: 1,
       ease: 'power1.inOut',
-      delay: 2.5,
+      delay: 0.8,
     });
   }, []);
   return (
@@ -37,26 +41,50 @@ const AboutUs = () => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.25 }}
-      className="max-sm:-mt-[50px]"
+      className="max-sm:-mt-[50px] flex flex-col justify-center"
     >
-      <div id="trigger" className="flex flex-col " ref={scrollRef}>
+      <div id="trigger" className="flex flex-col gap-5 " ref={scrollRef}>
         <TitleText title="About Us" textStyles="header-text" />
         <p id="para" className="sub-text">
-          Web3 communities <span className="guide-text">drive innovation</span>{' '}
-          by enabling people to{' '}
-          <span className="guide-text">engage, contribute, and govern</span> the
-          systems they believe in.
-          <br />
-          Communities create an ideal environment for various{' '}
-          <span className="guide-text">skills and ideas to unite</span>, leading
-          to a vibrant ecosystem that flourishes through collaboration—a{' '}
-          <span className="guide-text">proven formula for success.</span>
+          <span className="guide-text">Dsacorp is a mastermind community</span>{' '}
+          that aims to enable its members to navigate the web3 ecosystem safely.
+          We are a group of like-minded individuals who believe in the potential
+          of web3 and{' '}
+          <span className="guide-text">
+            share tips on how to successfully participate
+          </span>{' '}
+          in the web3 ecosystem and derive value from it. <br /> <br />
+          Our mission is to build the future by{' '}
+          <span className="guide-text">
+            educating our generation and future generations
+          </span>{' '}
+          on the fundamentals of web3 and the opportunities it presents. We
+          provide free resources and a safe space for individuals to explore the
+          web3 world.
           <br /> <br />
-          Here at <span className="guide-text">DSA CORP</span>, we are firm
-          believers that communities are at the core of the Web3 transformation.
-          They act as agents of change, igniting the flame of creativity and
-          cooperation, propelling us toward a decentralized future.
+          Our goal is to break down barriers slowing the adoption of web3
+          technology,{' '}
+          <span className="guide-text">
+            nurture the next generation of web3 innovators in Africa
+          </span>
+          , and build a more decentralized future.
         </p>
+
+        <div className="md:w-11/12 w-12/12 rounded-md">
+          <video
+            ref={videoRef}
+            className="rounded-md"
+            controls
+            autoPlay
+            muted
+            onPlay={handlePlay}
+            onPause={handlePause}
+            playsInline={true}
+            key={heroVideo}
+          >
+            <source src={heroVideo} type="video/mp4" />
+          </video>
+        </div>
 
         <div id="learn" className="flex mt-3 opacity-0">
           <Download
