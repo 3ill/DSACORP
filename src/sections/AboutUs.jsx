@@ -2,38 +2,14 @@ import { Download } from '../components';
 import { motion } from 'framer-motion';
 import { TitleText } from '../components/CustomTexts';
 import { staggerContainer } from '../utils/motion';
-import { useGSAP } from '@gsap/react';
 import { useRef } from 'react';
-import gsap from 'gsap';
 import { heroVideo } from '../assets';
 const AboutUs = () => {
-  const scrollRef = useRef();
   const videoRef = useRef(null);
 
   const handlePlay = () => videoRef.current.play();
   const handlePause = () => videoRef.current.pause();
-  useGSAP(() => {
-    gsap.fromTo(
-      '#para',
-      {
-        opacity: 0,
-        y: 20,
-      },
-      {
-        opacity: 1,
-        y: 0,
-        delay: 0.8,
-        stagger: 0.1,
-        ease: 'power1.inOut',
-      }
-    );
 
-    gsap.to('#learn', {
-      opacity: 1,
-      ease: 'power1.inOut',
-      delay: 0.8,
-    });
-  }, []);
   return (
     <motion.section
       id="about"
@@ -43,7 +19,7 @@ const AboutUs = () => {
       viewport={{ once: false, amount: 0.25 }}
       className="max-sm:-mt-[50px] flex flex-col justify-center"
     >
-      <div id="trigger" className="flex flex-col gap-5 " ref={scrollRef}>
+      <div className="flex flex-col gap-5 ">
         <TitleText title="About Us" textStyles="header-text" />
         <p id="para" className="sub-text">
           <span className="guide-text">Dsacorp is a mastermind community</span>{' '}
