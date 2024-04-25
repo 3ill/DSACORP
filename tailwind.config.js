@@ -21,6 +21,7 @@ export default {
         Azeret: ['Azeret Mono', 'Monospace'],
         satoshi: ['Satoshi', 'sans-serif'],
         allura: ['Allura', 'cursive'],
+        grotesk: ['Space Grotesk', 'sans-serif'],
       },
       colors: {
         primary: '#ECEEFF',
