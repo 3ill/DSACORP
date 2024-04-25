@@ -1,41 +1,41 @@
-import { useGSAP } from '@gsap/react';
 import { StarCanvas } from '../components';
-import gsap from 'gsap';
+import { motion } from 'framer-motion';
+import { fadeIn, staggerContainer } from '../utils/motion';
 
 const Hero = () => {
-  useGSAP(() => {
-    gsap.to('#big_text', {
-      opacity: 1,
-      delay: 0.7,
-      scale: 1.3,
-      ease: 'power1.out',
-    });
-    gsap.to('#small_text', {
-      opacity: 1,
-      delay: 0.8,
-    });
-  }, []);
   return (
-    <section
+    <motion.section
+      variants={staggerContainer}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: false, amount: 0.25 }}
       id="home"
       className=" relative sm:py-24 py-20 flex flex-col justify-center max-h-screen sm:max-h-screen  text-white max-sm:text-[40px] md:text-4xl lg:text-8xl font-extrabold font-orbitron tracking-[1.5px] bg-center bg-cover w-full items-center "
     >
       <StarCanvas />
       <div className="flex flex-col items-center -mt-[200px] max-sm:-mt-[250px]">
-        <h1
+        <motion.h1
+          variants={fadeIn('down', 'tween', 0.5, 0.75)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: false, amount: 0.25 }}
           id="big_text"
-          className="max-sm:mt-[10px] mt-[15px] !tracking-wider opacity-0 "
+          className="max-sm:mt-[10px] mt-[15px] !tracking-wider "
         >
           DSA CORP
-        </h1>
-        <h3
+        </motion.h1>
+        <motion.h3
+          variants={fadeIn('down', 'tween', 0.7, 0.75)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: false, amount: 0.25 }}
           id="small_text"
-          className="py-5 header-text !font-satoshi tracking-widest  mt-5 max-sm:mt-1 !font-semibold !text-gray-200 capitalize max-sm:text-[20px] opacity-0 "
+          className="py-5 font-grotesk mt-1 sm:mt-5 !font-bold !text-gray-200 text-[20px] sm:text-[30px] !tracking-[2.5px] !leading-[2.5rem] "
         >
           The Web3 Lifestyle
-        </h3>
+        </motion.h3>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

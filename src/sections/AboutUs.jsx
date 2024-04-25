@@ -2,14 +2,8 @@ import { Download } from '../components';
 import { motion } from 'framer-motion';
 import { TitleText } from '../components/CustomTexts';
 import { staggerContainer } from '../utils/motion';
-import { useRef } from 'react';
 import { heroVideo } from '../assets';
 const AboutUs = () => {
-  const videoRef = useRef(null);
-
-  const handlePlay = () => videoRef.current.play();
-  const handlePause = () => videoRef.current.pause();
-
   return (
     <motion.section
       id="about"
@@ -22,7 +16,7 @@ const AboutUs = () => {
       <div className="flex flex-col gap-5 ">
         <TitleText title="About Us" textStyles="header-text" />
         <p id="para" className="sub-text">
-          <span className="guide-text">Dsacorp is a mastermind community</span>{' '}
+          <span className="guide-text">DSA CORP is a mastermind community</span>{' '}
           that aims to enable its members navigate the web3 ecosystem safely. We
           are a group of like-minded individuals who believe in the potential of
           web3 and{' '}
@@ -47,17 +41,7 @@ const AboutUs = () => {
         </p>
 
         <div className="md:w-11/12 w-12/12 rounded-md">
-          <video
-            ref={videoRef}
-            className="rounded-md"
-            controls
-            autoPlay
-            muted
-            onPlay={handlePlay}
-            onPause={handlePause}
-            playsInline={true}
-            key={heroVideo}
-          >
+          <video controls autoPlay muted playsInline={true} key={heroVideo}>
             <source src={heroVideo} type="video/mp4" />
           </video>
         </div>

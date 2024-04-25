@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400;500;600;700;800&display=swap');
 @import url('https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,300,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -92,7 +93,7 @@
   }
 
   .info-text {
-    @apply font-satoshi font-medium text-slate-gray;
+    @apply font-grotesk font-bold text-slate-gray;
   }
 
   .header-text {
