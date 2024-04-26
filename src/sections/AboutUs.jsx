@@ -2,7 +2,7 @@ import { Download } from '../components';
 import { motion } from 'framer-motion';
 import { TitleText } from '../components/CustomTexts';
 import { staggerContainer } from '../utils/motion';
-import { heroVideo } from '../assets';
+
 const AboutUs = () => {
   return (
     <motion.section
@@ -42,10 +42,17 @@ const AboutUs = () => {
           , and build a more decentralized future.
         </p>
 
-        <div className="md:w-11/12 w-12/12 rounded-md">
-          <video controls autoPlay muted playsInline={true} key={heroVideo}>
-            <source src={heroVideo} type="video/mp4" />
-          </video>
+        {/**Embed youtube video */}
+        <div className="video-container padding-x md:flex sm:flex mt-5">
+          <iframe
+            width="500"
+            height="315"
+            src="https://www.youtube.com/embed/yZIi9-RTXUw"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
         </div>
 
         <div id="learn" className="flex mt-3 opacity-0">
