@@ -6,7 +6,7 @@ import { Banner } from '../../assets';
 
 const Stars = (props) => {
   const ref = useRef();
-  const sphere = random.inSphere(new Float32Array(5000), { radius: 1.3 });
+  const sphere = random.inSphere(new Float32Array(1000), { radius: 1.3 });
   useFrame((state, delta) => {
     ref.current.rotation.x -= delta / 10;
     ref.current.rotation.y -= delta / 15;
@@ -18,7 +18,7 @@ const Stars = (props) => {
       <Points ref={ref} positions={sphere} stride={4} frustumCulled {...props}>
         <PointMaterial
           transparent
-          color="#ffff"
+          color="#fff"
           size={0.005}
           sizeAttenuation={true}
           depthWrite={false}
