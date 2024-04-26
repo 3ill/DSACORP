@@ -1,14 +1,8 @@
 import { StarCanvas } from '../components';
-import { motion } from 'framer-motion';
-import { staggerContainer } from '../utils/motion';
 
 const Hero = () => {
   return (
-    <motion.section
-      variants={staggerContainer}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: false, amount: 0.25 }}
+    <section
       id="home"
       className=" relative sm:py-24 py-20 flex flex-col justify-center max-h-screen sm:max-h-screen  text-white max-sm:text-[40px] md:text-4xl lg:text-8xl font-extrabold font-orbitron tracking-[1.5px] bg-center bg-cover w-full items-center "
     >
@@ -21,7 +15,7 @@ const Hero = () => {
           The Web3 Lifestyle
         </h3>
       </div>
-    </motion.section>
+    </section>
   );
 };
 

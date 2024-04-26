@@ -1,6 +1,6 @@
 import { useActiveSectionContext } from '../../context/useActiveSectionContext';
 import { AnimatePresence, motion } from 'framer-motion';
-import { navVariants, planetVariants } from '../utils/motion';
+import { planetVariants } from '../utils/motion';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { RiCloseFill } from 'react-icons/ri';
 import { navLinks } from '../../constants';
