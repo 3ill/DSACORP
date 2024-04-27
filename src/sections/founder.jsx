@@ -12,10 +12,7 @@ const Founder = () => {
   return (
     <section className="flex flex-col md:flex-row  gap-2">
       <div className="flex flex-col">
-        <TitleText
-          title="Meet the founder"
-          textStyles="header-text capitalize"
-        />
+        <TitleText title="Meet the founder" textStyles="header-text" />
         <p className="sub-text">
           Martins Victor, who goes by the alias{' '}
           <span className="guide-text">DarkSkinAlien</span>, is the founder of{' '}
@@ -36,33 +33,33 @@ const Founder = () => {
             scale: 1,
             speed: 450,
           }}
-          className="w-[350px] h-[450px] lg:w-[500px] lg:h-[600px] bg-transparent shadow-md p-8"
+          className="w-[270px] h-[350px] lg:w-[500px] lg:h-[600px] bg-transparent "
         >
           <div className=" pb-5 justify-center items-center flex flex-col ">
             <img
               src={Profile}
-              className="object-cover w-[250px] h-[250px] lg:w-[550px] lg:h-[550px] rounded-[9px] shadow-md"
+              className="object-cover w-[300px] h-[350px] lg:w-[550px] lg:h-[550px] rounded-[9px]"
             />
 
             <div className="flex flex-row gap-5 p-2">
               <button onClick={handleFounderLinkedinClick}>
                 <img
                   src={Linkedin}
-                  className="w-[30px] h-[30px] lg:w-[80px] lg:h-[80px] hover:animate-pulse hover:scale-110 active:scale-105 transition"
+                  className="w-[40px] h-[40px] lg:w-[80px] lg:h-[80px] hover:animate-pulse hover:scale-110 active:scale-105 transition"
                 />
               </button>
 
               <button onClick={handleFounderInstagramClick}>
                 <img
                   src={instagram}
-                  className="w-[30px] h-[30px] lg:w-[80px] lg:h-[80px] hover:animate-pulse hover:scale-110 active:scale-105 transition"
+                  className="w-[40px] h-[40px] lg:w-[80px] lg:h-[80px] hover:animate-pulse hover:scale-110 active:scale-105 transition"
                 />
               </button>
 
               <button onClick={handleFounderTwitterClick}>
                 <img
                   src={Twitter}
-                  className="w-[30px] h-[30px] lg:w-[80px] lg:h-[80px] hover:animate-pulse hover:scale-110 active:scale-105 transition"
+                  className="w-[40px] h-[40px] lg:w-[80px] lg:h-[80px] hover:animate-pulse hover:scale-110 active:scale-105 transition"
                 />
               </button>
             </div>
