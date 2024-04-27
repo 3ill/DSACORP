@@ -97,7 +97,7 @@
   }
 
   .header-text {
-    @apply text-white text-[30px] lg:text-[50px] md:text-[40px] font-Azeret font-extrabold;
+    @apply text-white text-[25px] lg:text-[50px] md:text-[40px] font-Azeret font-extrabold;
   }
 
   .bullet-text {
