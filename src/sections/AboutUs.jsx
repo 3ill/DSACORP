@@ -43,7 +43,7 @@ const AboutUs = () => {
         </p>
 
         {/**Embed youtube video */}
-        <div className="video-container padding-x md:flex sm:flex mt-5">
+        {/* <div className="video-container padding-x md:flex sm:flex mt-5">
           <iframe
             width="500"
             height="315"
@@ -53,7 +53,7 @@ const AboutUs = () => {
             allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           ></iframe>
-        </div>
+        </div> */}
 
         <div id="learn" className="flex mt-3">
           <Download
