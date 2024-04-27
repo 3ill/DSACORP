@@ -10,7 +10,7 @@ import {
 
 const Founder = () => {
   return (
-    <section className="flex flex-col md:flex-row  gap-2">
+    <section className="flex flex-col md:flex-row pb-7  gap-2">
       <div className="flex flex-col">
         <TitleText title="Meet the founder" textStyles="header-text" />
         <p className="sub-text">

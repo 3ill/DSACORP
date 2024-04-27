@@ -16,7 +16,7 @@ const Upcoming = () => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.25 }}
-      className=" top-[950px] md:top-[1050px] lg:top-[1240px]"
+      className=""
     >
       <div className="flex flex-col  ">
         <TitleText

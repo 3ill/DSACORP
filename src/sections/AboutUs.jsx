@@ -55,7 +55,7 @@ const AboutUs = () => {
           ></iframe>
         </div>
 
-        <div id="learn" className="flex mt-3 opacity-0">
+        <div id="learn" className="flex mt-3">
           <Download
             title="Learn More"
             background="bg-secondary"
