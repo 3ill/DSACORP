@@ -41,28 +41,28 @@ const Founder = () => {
           <div className=" pb-5 justify-center items-center flex flex-col ">
             <img
               src={Profile}
-              className="object-cover w-[350px] h-[350px] lg:w-[550px] lg:h-[550px] rounded-[9px] shadow-md"
+              className="object-cover w-[250px] h-[250px] lg:w-[550px] lg:h-[550px] rounded-[9px] shadow-md"
             />
 
             <div className="flex flex-row gap-5 p-2">
               <button onClick={handleFounderLinkedinClick}>
                 <img
                   src={Linkedin}
-                  className="w-[50px] h-[50px] lg:w-[80px] lg:h-[80px] hover:animate-pulse hover:scale-110 active:scale-105 transition"
+                  className="w-[30px] h-[30px] lg:w-[80px] lg:h-[80px] hover:animate-pulse hover:scale-110 active:scale-105 transition"
                 />
               </button>
 
               <button onClick={handleFounderInstagramClick}>
                 <img
                   src={instagram}
-                  className="w-[50px] h-[50px] lg:w-[80px] lg:h-[80px] hover:animate-pulse hover:scale-110 active:scale-105 transition"
+                  className="w-[30px] h-[30px] lg:w-[80px] lg:h-[80px] hover:animate-pulse hover:scale-110 active:scale-105 transition"
                 />
               </button>
 
               <button onClick={handleFounderTwitterClick}>
                 <img
                   src={Twitter}
-                  className="w-[50px] h-[50px] lg:w-[80px] lg:h-[80px] hover:animate-pulse hover:scale-110 active:scale-105 transition"
+                  className="w-[30px] h-[30px] lg:w-[80px] lg:h-[80px] hover:animate-pulse hover:scale-110 active:scale-105 transition"
                 />
               </button>
             </div>
